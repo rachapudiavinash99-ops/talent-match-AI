@@ -89,3 +89,4 @@
 - Patch v2.089: add benchmark telemetry for candidate vector scoring speed
 - Patch v2.090: expand skill synonyms for Kubernetes, Docker and Cloud DevOps
 - Patch v2.091: optimize memory footprint during large corpus batch loading
+- Patch v2.092: enhance candidate skills gap visual representation in analytics modal
