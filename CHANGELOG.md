@@ -272,3 +272,4 @@
 - [PR #136] feat(nlp): Expand TF-IDF vectorizer to capture bi-grams and tri-grams for composite technical terms [PR #136]
 - [PR #137] feat(core): Implement exponential backoff with random jitter for concurrent filelock contention [PR #137]
 - [PR #138] feat(api): Add SHA-256 content fingerprinting to identify duplicate resume submissions [PR #138]
+- [PR #139] feat(ui): Memoize careers search filtering pipeline for instant client-side responsiveness [PR #139]
