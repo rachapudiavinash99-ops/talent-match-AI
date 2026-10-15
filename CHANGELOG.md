@@ -284,3 +284,4 @@
 - [PR #148] feat(parser): Improve PyPDF2 multi-page header/footer boundary detection and text stitching [PR #148]
 - [PR #149] feat(data): Add verified requisition metadata for Chennai, Kochi, and Narasaraopet centers [PR #149]
 - [PR #150] feat(api): Implement lightweight /healthz and /readyz probes for container environments [PR #150]
+- [PR #151] feat(api): Configure burst threshold tolerance on candidate upload endpoints [PR #151]
