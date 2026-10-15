@@ -102,3 +102,4 @@
 - Patch v2.102: tune cosine similarity threshold parameters for medical coding roles
 - Patch v2.103: enhance PyPDF2 multi-page layout text extraction accuracy
 - Patch v2.104: add support for docx table cell parsing in resume extractor
+- Patch v2.105: refine ElevateIQ orange gradient button micro-interactions
