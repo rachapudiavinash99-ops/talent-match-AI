@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --elevate-bg: #06091A;
+  --elevate-orange: #ff8a3d;
+  --elevate-blue: #3fd0ff;
+  --elevate-card: rgba(14, 20, 38, 0.85);
+  --elevate-border: rgba(255, 255, 255, 0.08);
+}
+
+@layer base {
+  body {
+    background-color: #06091A;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  .text-elevate-orange {
+    color: #ff8a3d;
+  }
+  .bg-elevate-orange {
+    background-color: #ff8a3d;
+  }
+  .border-elevate-orange {
+    border-color: #ff8a3d;
+  }
+
+  .text-elevate-blue {
+    color: #3fd0ff;
+  }
+  .bg-elevate-blue {
+    background-color: #3fd0ff;
+  }
+  .border-elevate-blue {
+    border-color: #3fd0ff;
+  }
+
+  .elevate-gradient-orange {
+    background: linear-gradient(135deg, #ff8a3d 0%, #f2701c 100%);
+  }
+  .elevate-gradient-blue {
+    background: linear-gradient(135deg, #3fd0ff 0%, #16a6e0 100%);
+  }
+  
+  .elevate-text-gradient {
+    background: linear-gradient(90deg, #ffffff 0%, #3fd0ff 50%, #ff8a3d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .elevate-card {
+    background: rgba(14, 20, 38, 0.85);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .elevate-card-hover {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .elevate-card-hover:hover {
+    border-color: rgba(63, 208, 255, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px -10px rgba(63, 208, 255, 0.2);
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  .animate-fade-in-up-delay-1 {
+    animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+    opacity: 0;
+  }
+  .animate-fade-in-up-delay-2 {
+    animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
