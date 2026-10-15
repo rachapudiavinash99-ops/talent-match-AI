@@ -79,3 +79,4 @@
 - Patch v2.079: enhance CSV export headers with formatted ISO timestamps
 - Patch v2.080: add fallback avatar icon for candidates without profile pictures
 - Patch v2.081: optimize TF-IDF stopword caching for latency reduction
+- Patch v2.082: tune cosine similarity threshold parameters for medical coding roles
