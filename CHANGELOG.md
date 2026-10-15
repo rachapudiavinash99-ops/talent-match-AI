@@ -45,3 +45,4 @@
 - Patch v2.045: refine ElevateIQ orange gradient button micro-interactions
 - Patch v2.046: implement smooth scrolling anchor navigation for corporate header
 - Patch v2.047: add candidate phone number sanitization filter
+- Patch v2.048: enhance filelock retry backoff jitter during concurrent writes
