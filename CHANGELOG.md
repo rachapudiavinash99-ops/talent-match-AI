@@ -78,3 +78,4 @@
 - Patch v2.078: add healthcheck endpoint for ASGI container orchestration
 - Patch v2.079: enhance CSV export headers with formatted ISO timestamps
 - Patch v2.080: add fallback avatar icon for candidates without profile pictures
+- Patch v2.081: optimize TF-IDF stopword caching for latency reduction
