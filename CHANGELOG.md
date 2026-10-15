@@ -43,3 +43,4 @@
 - Patch v2.043: enhance PyPDF2 multi-page layout text extraction accuracy
 - Patch v2.044: add support for docx table cell parsing in resume extractor
 - Patch v2.045: refine ElevateIQ orange gradient button micro-interactions
+- Patch v2.046: implement smooth scrolling anchor navigation for corporate header
