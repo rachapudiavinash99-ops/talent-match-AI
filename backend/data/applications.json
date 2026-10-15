@@ -27,7 +27,7 @@
         "id": "eiq-app-auto-2",
         "job_id": "eiq-job-1",
         "candidate_id": "eiq-cand-auto-2",
-        "stage": "Interview",
+        "stage": "Shortlisted",
         "notes": "Screened profile from Bengaluru. Competency score verified against job skill vectors.",
         "match_score": 86.0,
         "match_details": {
@@ -142,7 +142,7 @@
         "id": "eiq-app-auto-7",
         "job_id": "eiq-job-2",
         "candidate_id": "eiq-cand-auto-7",
-        "stage": "Interview",
+        "stage": "Shortlisted",
         "notes": "Screened profile from Hyderabad. Competency score verified against job skill vectors.",
         "match_score": 85.4,
         "match_details": {
