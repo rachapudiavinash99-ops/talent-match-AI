@@ -256,3 +256,4 @@
 - [PR #120] feat(api): Implement lightweight /healthz and /readyz probes for container environments [PR #120]
 - [PR #121] feat(nlp): Expand TF-IDF vectorizer to capture bi-grams and tri-grams for composite technical terms [PR #121]
 - [PR #122] feat(core): Implement exponential backoff with random jitter for concurrent filelock contention [PR #122]
+- [PR #123] feat(api): Add SHA-256 content fingerprinting to identify duplicate resume submissions [PR #123]
