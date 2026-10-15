@@ -201,3 +201,4 @@
 - [PR #063] feat(api): Add SHA-256 content fingerprinting to identify duplicate resume submissions [PR #063]
 - [PR #065] feat(nlp): Enrich stopword exclusions with healthcare and medical coding industry terms [PR #065]
 - [PR #066] feat(data): Expand cloud infrastructure skills taxonomy for AWS, GCP, and Kubernetes [PR #066]
+- [PR #067] feat(parser): Enhance docx parser to recursively traverse candidate employment table cells [PR #067]
