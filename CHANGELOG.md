@@ -189,3 +189,4 @@
 - [PR #051] feat(data): Expand cloud infrastructure skills taxonomy for AWS, GCP, and Kubernetes [PR #051]
 - [PR #052] feat(parser): Enhance docx parser to recursively traverse candidate employment table cells [PR #052]
 - [PR #053] feat(ui): Refine circular match gauge with smooth SVG stroke-dashoffset spring physics [PR #053]
+- [PR #054] feat(api): Add input validation and string sanitization on candidate application payloads [PR #054]
