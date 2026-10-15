@@ -182,3 +182,4 @@
 - [PR #044] feat(data): Add verified requisition metadata for Chennai, Kochi, and Narasaraopet centers [PR #044]
 - [PR #045] feat(api): Implement lightweight /healthz and /readyz probes for container environments [PR #045]
 - [PR #046] feat(nlp): Expand TF-IDF vectorizer to capture bi-grams and tri-grams for composite technical terms [PR #046]
+- [PR #047] feat(core): Implement exponential backoff with random jitter for concurrent filelock contention [PR #047]
