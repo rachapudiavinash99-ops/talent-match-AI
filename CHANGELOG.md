@@ -112,3 +112,4 @@
 - Patch v2.112: enhance candidate skills gap visual representation in analytics modal
 - Patch v2.113: add zero-leakage local validation guarantee check
 - Patch v2.114: refine recruiter stage change audit log timestamps
+- Patch v2.115: update candidate search index with smart case-folding
