@@ -1,0 +1,150 @@
+[
+    {
+        "id": "eiq-cand-1",
+        "name": "Suresh Reddy",
+        "email": "suresh.reddy@elevateiq-talent.in",
+        "phone": "+91-9870396237",
+        "skills": [
+            "react",
+            "python",
+            "fastapi",
+            "sql",
+            "docker"
+        ],
+        "resume_file": "Suresh_Reddy_Resume.pdf",
+        "created_at": "2026-10-14T15:31:22.887668"
+    },
+    {
+        "id": "eiq-cand-2",
+        "name": "Deepa Nair",
+        "email": "deepa.nair@elevateiq-talent.in",
+        "phone": "+91-9863051761",
+        "skills": [
+            "python",
+            "web scraping",
+            "selenium",
+            "sql",
+            "scrapy"
+        ],
+        "resume_file": "Deepa_Nair_Resume.pdf",
+        "created_at": "2026-10-14T15:31:22.887668"
+    },
+    {
+        "id": "eiq-cand-3",
+        "name": "Karthik Menon",
+        "email": "karthik.menon@elevateiq-talent.in",
+        "phone": "+91-9820858481",
+        "skills": [
+            "aws",
+            "docker",
+            "kubernetes",
+            "linux",
+            "terraform"
+        ],
+        "resume_file": "Karthik_Menon_Resume.pdf",
+        "created_at": "2026-10-14T15:31:22.887668"
+    },
+    {
+        "id": "eiq-cand-4",
+        "name": "Pooja Swaminathan",
+        "email": "pooja.swaminathan@elevateiq-talent.in",
+        "phone": "+91-9878153540",
+        "skills": [
+            "python",
+            "ocr",
+            "nlp",
+            "machine learning",
+            "tensorflow"
+        ],
+        "resume_file": "Pooja_Swaminathan_Resume.pdf",
+        "created_at": "2026-10-14T15:31:22.887668"
+    },
+    {
+        "id": "eiq-cand-5",
+        "name": "Venkat Sai",
+        "email": "venkat.sai@elevateiq-talent.in",
+        "phone": "+91-9870376285",
+        "skills": [
+            "computer vision",
+            "annotation",
+            "nlp",
+            "quality audit",
+            "labeling"
+        ],
+        "resume_file": "Venkat_Sai_Resume.pdf",
+        "created_at": "2026-10-14T15:31:22.887668"
+    },
+    {
+        "id": "eiq-cand-6",
+        "name": "Dr. Shalini Krishnan",
+        "email": "dr..shalini.krishnan@elevateiq-talent.in",
+        "phone": "+91-9814081848",
+        "skills": [
+            "medical coding",
+            "icd-10",
+            "cpt",
+            "hipaa",
+            "rcm"
+        ],
+        "resume_file": "Dr._Shalini_Krishnan_Resume.pdf",
+        "created_at": "2026-10-14T15:31:22.887668"
+    },
+    {
+        "id": "eiq-cand-7",
+        "name": "Akhil Varma",
+        "email": "akhil.varma@elevateiq-talent.in",
+        "phone": "+91-9828166608",
+        "skills": [
+            "ar calling",
+            "denial management",
+            "revenue cycle",
+            "communication"
+        ],
+        "resume_file": "Akhil_Varma_Resume.pdf",
+        "created_at": "2026-10-14T15:31:22.887668"
+    },
+    {
+        "id": "eiq-cand-8",
+        "name": "Anusha Rao",
+        "email": "anusha.rao@elevateiq-talent.in",
+        "phone": "+91-9878722374",
+        "skills": [
+            "customer support",
+            "tele-evaluation",
+            "quality assurance",
+            "communication"
+        ],
+        "resume_file": "Anusha_Rao_Resume.pdf",
+        "created_at": "2026-10-14T15:31:22.887668"
+    },
+    {
+        "id": "eiq-cand-9",
+        "name": "Mahesh Babu K",
+        "email": "mahesh.babu.k@elevateiq-talent.in",
+        "phone": "+91-9845423223",
+        "skills": [
+            "python",
+            "django",
+            "sql",
+            "redis",
+            "aws"
+        ],
+        "resume_file": "Mahesh_Babu_K_Resume.pdf",
+        "created_at": "2026-10-14T15:31:22.887668"
+    },
+    {
+        "id": "eiq-cand-10",
+        "name": "Divya Balaji",
+        "email": "divya.balaji@elevateiq-talent.in",
+        "phone": "+91-9822564178",
+        "skills": [
+            "react",
+            "next.js",
+            "typescript",
+            "tailwind",
+            "figma"
+        ],
+        "resume_file": "Divya_Balaji_Resume.pdf",
+        "created_at": "2026-10-14T15:31:22.887668"
+    }
+]

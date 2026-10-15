@@ -1,0 +1,211 @@
+[
+    {
+        "id": "eiq-job-1",
+        "title": "Senior Full-Stack Engineer (React & Python)",
+        "department": "IT Engineering",
+        "location": "Chennai",
+        "description": "ElevateIQ Soft Tech is seeking a talented Senior Full-Stack Engineer (React & Python) to scale our enterprise solutions in our Chennai facility. Elevate Your Career, Empower Your Future.",
+        "required_skills": [
+            "react",
+            "python",
+            "fastapi",
+            "sql"
+        ],
+        "preferred_skills": [
+            "docker",
+            "next.js"
+        ],
+        "min_experience_years": 4,
+        "education_requirement": "B.Tech / MCA",
+        "status": "Open",
+        "created_at": "2026-10-14T15:31:22.887668"
+    },
+    {
+        "id": "eiq-job-2",
+        "title": "Data Harvesting & Crawler Specialist",
+        "department": "Data Solutions",
+        "location": "Hyderabad",
+        "description": "ElevateIQ Soft Tech is seeking a talented Data Harvesting & Crawler Specialist to scale our enterprise solutions in our Hyderabad facility. Elevate Your Career, Empower Your Future.",
+        "required_skills": [
+            "python",
+            "web scraping",
+            "selenium",
+            "sql"
+        ],
+        "preferred_skills": [
+            "scrapy",
+            "proxy rotation"
+        ],
+        "min_experience_years": 3,
+        "education_requirement": "B.Tech / B.Sc Computer Science",
+        "status": "Open",
+        "created_at": "2026-10-14T15:31:22.887668"
+    },
+    {
+        "id": "eiq-job-3",
+        "title": "Cloud & DevOps Architect",
+        "department": "Cloud & Infra",
+        "location": "Kochi",
+        "description": "ElevateIQ Soft Tech is seeking a talented Cloud & DevOps Architect to scale our enterprise solutions in our Kochi facility. Elevate Your Career, Empower Your Future.",
+        "required_skills": [
+            "aws",
+            "docker",
+            "kubernetes",
+            "linux"
+        ],
+        "preferred_skills": [
+            "terraform",
+            "ci/cd"
+        ],
+        "min_experience_years": 5,
+        "education_requirement": "B.Tech / MCA",
+        "status": "Open",
+        "created_at": "2026-10-14T15:31:22.887668"
+    },
+    {
+        "id": "eiq-job-4",
+        "title": "Intelligent Document Processing (IDP) Engineer",
+        "department": "AI & Data",
+        "location": "Bengaluru",
+        "description": "ElevateIQ Soft Tech is seeking a talented Intelligent Document Processing (IDP) Engineer to scale our enterprise solutions in our Bengaluru facility. Elevate Your Career, Empower Your Future.",
+        "required_skills": [
+            "python",
+            "ocr",
+            "nlp",
+            "machine learning"
+        ],
+        "preferred_skills": [
+            "layoutlm",
+            "tensorflow"
+        ],
+        "min_experience_years": 3,
+        "education_requirement": "B.Tech / M.Tech",
+        "status": "Open",
+        "created_at": "2026-10-14T15:31:22.887668"
+    },
+    {
+        "id": "eiq-job-5",
+        "title": "Data Annotation & ML Tagging Lead",
+        "department": "AI Solutions",
+        "location": "Narasaraopet",
+        "description": "ElevateIQ Soft Tech is seeking a talented Data Annotation & ML Tagging Lead to scale our enterprise solutions in our Narasaraopet facility. Elevate Your Career, Empower Your Future.",
+        "required_skills": [
+            "computer vision",
+            "annotation",
+            "nlp",
+            "quality audit"
+        ],
+        "preferred_skills": [
+            "labeling",
+            "python"
+        ],
+        "min_experience_years": 2,
+        "education_requirement": "Any Graduate / BCA",
+        "status": "Open",
+        "created_at": "2026-10-14T15:31:22.887668"
+    },
+    {
+        "id": "eiq-job-6",
+        "title": "Certified Medical Coder (ICD-10 & CPT)",
+        "department": "Non-IT & Healthcare BPO",
+        "location": "Chennai",
+        "description": "ElevateIQ Soft Tech is seeking a talented Certified Medical Coder (ICD-10 & CPT) to scale our enterprise solutions in our Chennai facility. Elevate Your Career, Empower Your Future.",
+        "required_skills": [
+            "medical coding",
+            "icd-10",
+            "cpt",
+            "hipaa"
+        ],
+        "preferred_skills": [
+            "rcm",
+            "claims audit"
+        ],
+        "min_experience_years": 3,
+        "education_requirement": "B.Pharm / Life Sciences / Nursing",
+        "status": "Open",
+        "created_at": "2026-10-14T15:31:22.887668"
+    },
+    {
+        "id": "eiq-job-7",
+        "title": "AR Calling & Denial Resolution Executive",
+        "department": "Healthcare Operations",
+        "location": "Kochi",
+        "description": "ElevateIQ Soft Tech is seeking a talented AR Calling & Denial Resolution Executive to scale our enterprise solutions in our Kochi facility. Elevate Your Career, Empower Your Future.",
+        "required_skills": [
+            "ar calling",
+            "denial management",
+            "revenue cycle",
+            "communication"
+        ],
+        "preferred_skills": [
+            "insurance follow-up"
+        ],
+        "min_experience_years": 2,
+        "education_requirement": "Any Graduate",
+        "status": "Open",
+        "created_at": "2026-10-14T15:31:22.887668"
+    },
+    {
+        "id": "eiq-job-8",
+        "title": "TESS Quality & Technical Support Lead",
+        "department": "BPO & Customer Operations",
+        "location": "Narasaraopet",
+        "description": "ElevateIQ Soft Tech is seeking a talented TESS Quality & Technical Support Lead to scale our enterprise solutions in our Narasaraopet facility. Elevate Your Career, Empower Your Future.",
+        "required_skills": [
+            "customer support",
+            "tele-evaluation",
+            "quality assurance",
+            "communication"
+        ],
+        "preferred_skills": [
+            "helpdesk",
+            "reporting"
+        ],
+        "min_experience_years": 3,
+        "education_requirement": "Any Graduate",
+        "status": "Open",
+        "created_at": "2026-10-14T15:31:22.887668"
+    },
+    {
+        "id": "eiq-job-9",
+        "title": "Backend Python & Microservices Developer",
+        "department": "IT Engineering",
+        "location": "Hyderabad",
+        "description": "ElevateIQ Soft Tech is seeking a talented Backend Python & Microservices Developer to scale our enterprise solutions in our Hyderabad facility. Elevate Your Career, Empower Your Future.",
+        "required_skills": [
+            "python",
+            "django",
+            "sql",
+            "redis"
+        ],
+        "preferred_skills": [
+            "aws",
+            "kafka"
+        ],
+        "min_experience_years": 4,
+        "education_requirement": "B.Tech / MCA",
+        "status": "Open",
+        "created_at": "2026-10-14T15:31:22.887668"
+    },
+    {
+        "id": "eiq-job-10",
+        "title": "Enterprise Frontend Developer (Next.js)",
+        "department": "IT Engineering",
+        "location": "Chennai",
+        "description": "ElevateIQ Soft Tech is seeking a talented Enterprise Frontend Developer (Next.js) to scale our enterprise solutions in our Chennai facility. Elevate Your Career, Empower Your Future.",
+        "required_skills": [
+            "react",
+            "next.js",
+            "typescript",
+            "tailwind"
+        ],
+        "preferred_skills": [
+            "graphql",
+            "figma"
+        ],
+        "min_experience_years": 3,
+        "education_requirement": "B.Tech / BCA",
+        "status": "Open",
+        "created_at": "2026-10-14T15:31:22.887668"
+    }
+]
