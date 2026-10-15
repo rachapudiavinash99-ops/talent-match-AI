@@ -127,3 +127,4 @@
 - Patch v2.127: add candidate phone number sanitization filter
 - Patch v2.128: enhance filelock retry backoff jitter during concurrent writes
 - Patch v2.129: add benchmark telemetry for candidate vector scoring speed
+- Patch v2.130: expand skill synonyms for Kubernetes, Docker and Cloud DevOps
