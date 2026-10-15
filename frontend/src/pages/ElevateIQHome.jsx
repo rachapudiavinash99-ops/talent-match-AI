@@ -613,9 +613,9 @@ function ElevateIQHome() {
                     <span className="text-xs text-gray-500 font-medium">{job.id}</span>
                     <button 
                       onClick={() => setApplyingJob(job)}
-                      className="px-5 py-2.5 rounded-full bg-gradient-to-r from-[#ff8a3d] to-[#f2701c] hover:brightness-110 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-[0_0_20px_rgba(255,138,61,0.3)] flex items-center"
+                      className="px-6 py-2.5 rounded-full bg-gradient-to-r from-[#ff8a3d] to-[#f2701c] hover:brightness-110 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-[0_0_20px_rgba(255,138,61,0.3)] flex items-center"
                     >
-                      Apply with AI Match <ChevronRight className="w-4 h-4 ml-1" />
+                      Apply <ChevronRight className="w-4 h-4 ml-1" />
                     </button>
                   </div>
                 </div>
