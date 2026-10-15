@@ -142,3 +142,4 @@
 - [PR #004] feat(ui): Memoize careers search filtering pipeline for instant client-side responsiveness [PR #004]
 - [PR #005] feat(nlp): Enrich stopword exclusions with healthcare and medical coding industry terms [PR #005]
 - [PR #006] feat(data): Expand cloud infrastructure skills taxonomy for AWS, GCP, and Kubernetes [PR #006]
+- [PR #007] feat(parser): Enhance docx parser to recursively traverse candidate employment table cells [PR #007]
