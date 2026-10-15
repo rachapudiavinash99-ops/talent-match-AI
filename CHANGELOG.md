@@ -246,3 +246,4 @@
 - [PR #110] feat(nlp): Enrich stopword exclusions with healthcare and medical coding industry terms [PR #110]
 - [PR #111] feat(data): Expand cloud infrastructure skills taxonomy for AWS, GCP, and Kubernetes [PR #111]
 - [PR #112] feat(parser): Enhance docx parser to recursively traverse candidate employment table cells [PR #112]
+- [PR #113] feat(ui): Refine circular match gauge with smooth SVG stroke-dashoffset spring physics [PR #113]
