@@ -3,7 +3,8 @@ import axios from 'axios';
 import { 
   FileText, RefreshCw, Sparkles, X, CheckCircle, Clock, 
   Filter, Search, ArrowUpDown, UserCheck, Layers, Building2, MapPin,
-  Briefcase, ChevronRight, Check, AlertCircle, ArrowUpRight, Award, Mail, Phone, ExternalLink
+  Briefcase, ChevronRight, Check, AlertCircle, ArrowUpRight, Award, Mail, Phone,
+  Zap, Scale, CheckSquare, Square, ArrowLeftRight, ArrowRight
 } from 'lucide-react';
 
 const API_BASE = 'http://localhost:8000/api';
@@ -17,16 +18,20 @@ function Applications() {
   const [selectedApp, setSelectedApp] = useState(null);
 
   // Filters & Sorting
-  const [selectedJobId, setSelectedJobId] = useState(null); // When null or 'ALL', shows all; otherwise shows selected job
+  const [selectedJobId, setSelectedJobId] = useState(null);
   const [selectedStage, setSelectedStage] = useState('ALL');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('score-desc');
+
+  // Interactive Buttons State
+  const [actionBanner, setActionBanner] = useState('');
+  const [selectedCompareIds, setSelectedCompareIds] = useState([]);
+  const [showCompareModal, setShowCompareModal] = useState(false);
 
   const fetchApps = () => axios.get(`${API_BASE}/applications/`).then(res => setApplications(res.data));
   const fetchLookups = () => {
     axios.get(`${API_BASE}/jobs/`).then(res => {
       setJobs(res.data);
-      // Default to the first job if not yet set
       if (!selectedJobId && res.data.length > 0) {
         setSelectedJobId(res.data[0].id);
       }
@@ -60,6 +65,51 @@ function Applications() {
       }
     } catch (err) {
       alert("Error updating pipeline stage");
+    }
+  };
+
+  // ==============================================================
+  // ⚡ BUTTON 1: AUTO-SHORTLIST TOP CANDIDATES (>= 80%)
+  // ==============================================================
+  const handleAutoShortlist = async () => {
+    const candidatesToShortlist = filteredApps.filter(
+      app => (app.match_score || 0) >= 80 && app.stage !== 'Shortlisted' && app.stage !== 'Offer'
+    );
+    
+    if (candidatesToShortlist.length === 0) {
+      setActionBanner('All top candidates (≥80%) in current view are already Shortlisted or in Offer stage!');
+      setTimeout(() => setActionBanner(''), 4500);
+      return;
+    }
+
+    try {
+      await Promise.all(
+        candidatesToShortlist.map(app => 
+          axios.put(`${API_BASE}/applications/${app.id}/stage?stage=Shortlisted`)
+        )
+      );
+      setActionBanner(`⚡ Successfully advanced ${candidatesToShortlist.length} candidate(s) (≥80%) to "Shortlisted"!`);
+      setTimeout(() => setActionBanner(''), 5000);
+      fetchApps();
+    } catch (err) {
+      console.error(err);
+      alert('Error auto-shortlisting candidates.');
+    }
+  };
+
+  // ==============================================================
+  // ⚖️ BUTTON 2: COMPARE CANDIDATES SELECTION TOGGLE
+  // ==============================================================
+  const toggleSelectForCompare = (appId) => {
+    if (selectedCompareIds.includes(appId)) {
+      setSelectedCompareIds(selectedCompareIds.filter(id => id !== appId));
+    } else {
+      if (selectedCompareIds.length >= 2) {
+        // Keep the second one and add the new one (always max 2 for clean side-by-side)
+        setSelectedCompareIds([selectedCompareIds[1], appId]);
+      } else {
+        setSelectedCompareIds([...selectedCompareIds, appId]);
+      }
     }
   };
 
@@ -147,6 +197,14 @@ function Applications() {
         </div>
       </div>
 
+      {/* Action Notification Banner */}
+      {actionBanner && (
+        <div className="mb-6 p-4 rounded-xl bg-emerald-950/80 border border-emerald-500/50 text-emerald-300 text-xs font-bold flex items-center shadow-lg animate-fade-in-up">
+          <CheckCircle className="w-4 h-4 mr-2 text-emerald-400 flex-shrink-0" />
+          <span>{actionBanner}</span>
+        </div>
+      )}
+
       {/* Manual Evaluation Trigger Modal / Form */}
       {showForm && (
         <form onSubmit={handleSubmit} className="elevate-card p-7 rounded-2xl mb-8 border border-white/10 flex flex-col md:flex-row gap-4 items-end animate-fade-in-up">
@@ -183,7 +241,7 @@ function Applications() {
       )}
 
       {/* ============================================================== */}
-      {/* 📦 REQUIREMENT 1: JOB ROLES IN SQUARE BOXES */}
+      {/* 📦 JOB ROLES IN SQUARE BOXES */}
       {/* ============================================================== */}
       <div className="mb-8">
         <div className="flex items-center justify-between mb-4">
@@ -287,19 +345,19 @@ function Applications() {
       </div>
 
       {/* ============================================================== */}
-      {/* 📋 SECTION: APPLICATIONS FOR SELECTED ROLE */}
+      {/* 📋 APPLICATIONS SECTION WITH ACTION BUTTONS */}
       {/* ============================================================== */}
       <div className="elevate-card rounded-2xl border border-white/10 overflow-hidden shadow-xl">
         
-        {/* Banner for Currently Focused Role */}
-        <div className="p-5 bg-gradient-to-r from-white/[0.04] to-transparent border-b border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        {/* Banner with Button 1 & Button 2 */}
+        <div className="p-5 bg-gradient-to-r from-white/[0.04] to-transparent border-b border-white/10 flex flex-col xl:flex-row justify-between items-start xl:items-center gap-4">
           <div>
             <div className="flex items-center space-x-2">
               <span className="text-[10px] font-bold uppercase tracking-widest text-[#3fd0ff] bg-cyan-950/60 border border-[#3fd0ff]/30 px-2 py-0.5 rounded-full">
                 {selectedJob ? 'Selected Job Role' : 'All Open Roles'}
               </span>
               <span className="text-xs text-gray-400 font-semibold">
-                Showing <strong className="text-white">{filteredApps.length}</strong> Candidate Applications (Varied Match %)
+                Showing <strong className="text-white">{filteredApps.length}</strong> Applications
               </span>
             </div>
             
@@ -320,14 +378,40 @@ function Applications() {
             )}
           </div>
 
-          {/* Quick Filters */}
-          <div className="flex flex-wrap items-center gap-3 w-full md:w-auto">
+          {/* Action Buttons & Filters Bar */}
+          <div className="flex flex-wrap items-center gap-3 w-full xl:w-auto">
+            
+            {/* ⚡ BUTTON 1: AUTO-SHORTLIST TOP CANDIDATES (>=80%) */}
+            <button
+              onClick={handleAutoShortlist}
+              className="px-3.5 py-1.5 bg-gradient-to-r from-emerald-600 to-teal-600 hover:brightness-110 text-white rounded-xl text-xs font-bold uppercase tracking-wider flex items-center shadow-[0_0_15px_rgba(16,185,129,0.35)] transition-all whitespace-nowrap"
+              title="Automatically advance all candidates with >=80% match score to Shortlisted stage"
+            >
+              <Zap className="w-3.5 h-3.5 mr-1.5 text-yellow-300 fill-yellow-300" />
+              Auto-Shortlist (&ge;80%)
+            </button>
+
+            {/* ⚖️ BUTTON 2: COMPARE CANDIDATES (SIDE-BY-SIDE) */}
+            <button
+              onClick={() => setShowCompareModal(true)}
+              disabled={selectedCompareIds.length < 2}
+              className={`px-3.5 py-1.5 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center transition-all whitespace-nowrap ${
+                selectedCompareIds.length >= 2
+                  ? 'bg-gradient-to-r from-[#ff8a3d] to-[#f2701c] hover:brightness-110 text-white shadow-[0_0_15px_rgba(255,138,61,0.4)] cursor-pointer'
+                  : 'bg-white/5 text-gray-500 border border-white/10 cursor-not-allowed'
+              }`}
+              title={selectedCompareIds.length < 2 ? "Select at least 2 candidates using the checkboxes below to compare" : "Compare 2 selected candidates side-by-side"}
+            >
+              <Scale className="w-3.5 h-3.5 mr-1.5" />
+              Compare ({selectedCompareIds.length}/2)
+            </button>
+
             {/* Search */}
-            <div className="relative w-full sm:w-64">
+            <div className="relative w-full sm:w-52">
               <Search className="w-3.5 h-3.5 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2" />
               <input 
                 type="text" 
-                placeholder="Search applicant name, skills..." 
+                placeholder="Search applicant..." 
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}
                 className="w-full pl-8 pr-3 py-1.5 bg-black/40 border border-white/10 rounded-xl text-xs text-white placeholder-gray-500 focus:outline-none focus:border-[#3fd0ff]"
@@ -338,7 +422,7 @@ function Applications() {
             <select
               value={selectedStage}
               onChange={e => setSelectedStage(e.target.value)}
-              className="bg-[#0a0f24] border border-white/15 rounded-xl px-3 py-1.5 text-xs text-white focus:outline-none focus:border-[#3fd0ff]"
+              className="bg-[#0a0f24] border border-white/15 rounded-xl px-2.5 py-1.5 text-xs text-white focus:outline-none focus:border-[#3fd0ff]"
             >
               <option value="ALL">All Stages</option>
               <option value="Offer">Offer</option>
@@ -353,7 +437,7 @@ function Applications() {
             <select
               value={sortBy}
               onChange={e => setSortBy(e.target.value)}
-              className="bg-[#0a0f24] border border-white/15 rounded-xl px-3 py-1.5 text-xs text-white focus:outline-none focus:border-[#3fd0ff]"
+              className="bg-[#0a0f24] border border-white/15 rounded-xl px-2.5 py-1.5 text-xs text-white focus:outline-none focus:border-[#3fd0ff]"
             >
               <option value="score-desc">Match % (High &rarr; Low)</option>
               <option value="score-asc">Match % (Low &rarr; High)</option>
@@ -362,10 +446,29 @@ function Applications() {
           </div>
         </div>
 
+        {/* Selection Hint when compare count is 1 */}
+        {selectedCompareIds.length === 1 && (
+          <div className="bg-orange-950/40 border-b border-[#ff8a3d]/20 px-5 py-2 text-xs text-[#ff8a3d] flex items-center justify-between">
+            <span className="flex items-center">
+              <Scale className="w-3.5 h-3.5 mr-1.5" />
+              1 candidate selected for comparison. Check one more candidate to unlock side-by-side comparison.
+            </span>
+            <button 
+              onClick={() => setSelectedCompareIds([])}
+              className="text-gray-400 hover:text-white text-[11px] font-bold uppercase underline"
+            >
+              Clear
+            </button>
+          </div>
+        )}
+
         {/* Applications Table */}
         <table className="min-w-full divide-y divide-white/10 text-left">
           <thead className="bg-white/[0.02]">
             <tr>
+              <th className="px-4 py-4 text-xs font-bold uppercase tracking-wider text-gray-400 text-center w-12">
+                Compare
+              </th>
               <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-gray-400">Applicant Name &amp; Contact</th>
               <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-gray-400">Position Role</th>
               <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-gray-400">AI Match Fit</th>
@@ -377,7 +480,7 @@ function Applications() {
           <tbody className="divide-y divide-white/5">
             {filteredApps.length === 0 ? (
               <tr>
-                <td colSpan="6" className="px-6 py-12 text-center text-gray-400 text-xs">
+                <td colSpan="7" className="px-6 py-12 text-center text-gray-400 text-xs">
                   No applications match your active filters for this position.
                 </td>
               </tr>
@@ -388,10 +491,30 @@ function Applications() {
               const candName = cand?.name || (app.candidate_id ? 'Candidate ' + app.candidate_id.slice(0, 8) : 'Applicant');
               const scoreBadge = getScoreBadge(app.match_score);
               const matchedSkills = app.match_details?.required_skills_matched || [];
+              const isCheckedForCompare = selectedCompareIds.includes(app.id);
 
               return (
-                <tr key={app.id} className="hover:bg-white/[0.02] transition-colors">
+                <tr 
+                  key={app.id} 
+                  className={`transition-colors ${isCheckedForCompare ? 'bg-[#ff8a3d]/10' : 'hover:bg-white/[0.02]'}`}
+                >
                   
+                  {/* Compare Selection Checkbox */}
+                  <td className="px-4 py-4 whitespace-nowrap text-center">
+                    <button
+                      type="button"
+                      onClick={() => toggleSelectForCompare(app.id)}
+                      className="p-1 rounded text-gray-400 hover:text-white transition-colors"
+                      title={isCheckedForCompare ? "Deselect candidate" : "Select for side-by-side comparison"}
+                    >
+                      {isCheckedForCompare ? (
+                        <CheckSquare className="w-4 h-4 text-[#ff8a3d]" />
+                      ) : (
+                        <Square className="w-4 h-4 text-gray-600 hover:text-gray-400" />
+                      )}
+                    </button>
+                  </td>
+
                   {/* Candidate Name & Contact */}
                   <td className="px-6 py-4 whitespace-nowrap">
                     <span className="text-xs font-bold text-white block">{candName}</span>
@@ -469,13 +592,253 @@ function Applications() {
       </div>
 
       {/* ============================================================== */}
-      {/* 🔬 REQUIREMENT 2: FULLY POPULATED DEEP ANALYTICS MODAL */}
+      {/* ⚖️ MODAL: SIDE-BY-SIDE CANDIDATE COMPARISON MATRIX */}
+      {/* ============================================================== */}
+      {showCompareModal && selectedCompareIds.length >= 2 && (() => {
+        const app1 = applications.find(a => a.id === selectedCompareIds[0]);
+        const app2 = applications.find(a => a.id === selectedCompareIds[1]);
+        if (!app1 || !app2) return null;
+
+        const cand1 = candidates.find(c => c.id === app1.candidate_id);
+        const cand2 = candidates.find(c => c.id === app2.candidate_id);
+        const job1 = jobs.find(j => j.id === app1.job_id);
+        const job2 = jobs.find(j => j.id === app2.job_id);
+
+        const score1 = app1.match_score || 0;
+        const score2 = app2.match_score || 0;
+        const delta = Math.abs(score1 - score2).toFixed(1);
+
+        const skills1 = cand1?.skills || [];
+        const skills2 = cand2?.skills || [];
+        const sharedSkills = skills1.filter(s => skills2.map(x => x.toLowerCase()).includes(s.toLowerCase()));
+        const uniqueTo1 = skills1.filter(s => !skills2.map(x => x.toLowerCase()).includes(s.toLowerCase()));
+        const uniqueTo2 = skills2.filter(s => !skills1.map(x => x.toLowerCase()).includes(s.toLowerCase()));
+
+        return (
+          <div className="fixed inset-0 bg-black/85 backdrop-blur-md flex items-center justify-center z-50 p-4">
+            <div className="bg-[#0a0f24] border border-white/20 rounded-3xl max-w-5xl w-full overflow-hidden flex flex-col max-h-[92vh] shadow-[0_0_60px_rgba(255,138,61,0.35)] animate-fade-in-up">
+              
+              {/* Modal Header */}
+              <div className="p-6 border-b border-white/10 flex justify-between items-center bg-white/[0.02]">
+                <div>
+                  <span className="text-xs font-bold uppercase tracking-widest text-[#ff8a3d] flex items-center">
+                    <Scale className="w-3.5 h-3.5 mr-1.5" /> Candidate Differential Matrix
+                  </span>
+                  <h3 className="text-2xl font-black uppercase text-white mt-0.5">
+                    Side-by-Side Candidate Evaluation &gt;
+                  </h3>
+                </div>
+                <button 
+                  onClick={() => setShowCompareModal(false)}
+                  className="text-gray-400 hover:text-white p-2 rounded-full hover:bg-white/10 transition-colors"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+
+              {/* Scrollable Comparison Content */}
+              <div className="p-6 md:p-8 overflow-y-auto space-y-6">
+                
+                {/* Score Delta Banner */}
+                <div className="p-4 rounded-2xl bg-gradient-to-r from-orange-950/40 via-cyan-950/40 to-blue-950/40 border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+                  <div>
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-[#3fd0ff] block">
+                      Comparative Assessment
+                    </span>
+                    <p className="text-xs text-white font-medium mt-0.5">
+                      {score1 > score2
+                        ? `Candidate ${cand1?.name || 'A'} holds a +${delta}% competency lead over ${cand2?.name || 'B'}.`
+                        : score2 > score1
+                        ? `Candidate ${cand2?.name || 'B'} holds a +${delta}% competency lead over ${cand1?.name || 'A'}.`
+                        : `Both candidates are tied at an identical ${score1}% match fit.`}
+                    </p>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <span className="text-xs font-bold px-3 py-1 bg-white/10 rounded-full border border-white/15 text-white">
+                      Delta: &Delta; {delta}%
+                    </span>
+                  </div>
+                </div>
+
+                {/* 2-Column Side-by-Side Cards */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  
+                  {/* Candidate 1 Column */}
+                  <div className={`p-6 rounded-2xl border transition-all ${
+                    score1 >= score2 ? 'bg-[#060c24] border-[#3fd0ff]/50 shadow-[0_0_20px_rgba(63,208,255,0.2)]' : 'bg-[#080d22] border-white/10'
+                  }`}>
+                    <div className="flex items-start justify-between">
+                      <div>
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400">Candidate A</span>
+                        <h4 className="text-xl font-black text-white mt-0.5">{cand1?.name || 'Candidate A'}</h4>
+                        <p className="text-xs text-gray-400">{job1?.title || 'Target Role'}</p>
+                      </div>
+                      <span className={`px-3 py-1 rounded-full text-sm font-black border ${getScoreBadge(score1).bg}`}>
+                        {score1}%
+                      </span>
+                    </div>
+
+                    <div className="mt-4 space-y-3 text-xs">
+                      <div className="p-3 rounded-xl bg-white/5 border border-white/10">
+                        <span className="text-[10px] text-gray-400 font-bold uppercase block">Contact &amp; Location</span>
+                        <span className="text-white font-semibold mt-0.5 block">{cand1?.email}</span>
+                        <span className="text-gray-400 text-[11px] block">{cand1?.phone} • {cand1?.experience}</span>
+                      </div>
+
+                      <div className="p-3 rounded-xl bg-white/5 border border-white/10">
+                        <span className="text-[10px] text-gray-400 font-bold uppercase block mb-1">Confirmed Role Skills</span>
+                        <div className="flex flex-wrap gap-1">
+                          {(app1.match_details?.required_skills_matched || []).map((s, i) => (
+                            <span key={i} className="px-2 py-0.5 rounded text-[10px] font-bold bg-green-950 text-green-300 border border-green-500/30">
+                              ✓ {s}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
+                      <div className="p-3 rounded-xl bg-white/5 border border-white/10">
+                        <span className="text-[10px] text-gray-400 font-bold uppercase block mb-1">Skill Gaps (Deficits)</span>
+                        <div className="flex flex-wrap gap-1">
+                          {(app1.match_details?.required_skills_missing || []).length > 0 ? (
+                            (app1.match_details?.required_skills_missing || []).map((s, i) => (
+                              <span key={i} className="px-2 py-0.5 rounded text-[10px] font-bold bg-red-950 text-red-300 border border-red-500/30">
+                                ✕ {s}
+                              </span>
+                            ))
+                          ) : (
+                            <span className="text-[11px] text-emerald-400 font-semibold">Zero gaps — Full required alignment</span>
+                          )}
+                        </div>
+                      </div>
+
+                      <div className="pt-2 flex items-center justify-between">
+                        <span className="text-xs text-gray-400 font-semibold">Stage: <strong className="text-white">{app1.stage}</strong></span>
+                        <button
+                          onClick={() => updateStage(app1.id, 'Interview')}
+                          className="px-3 py-1.5 bg-[#3fd0ff]/20 hover:bg-[#3fd0ff] border border-[#3fd0ff]/40 text-[#3fd0ff] hover:text-[#06091A] rounded-lg text-xs font-bold uppercase transition-all"
+                        >
+                          Advance to Interview
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Candidate 2 Column */}
+                  <div className={`p-6 rounded-2xl border transition-all ${
+                    score2 > score1 ? 'bg-[#060c24] border-[#3fd0ff]/50 shadow-[0_0_20px_rgba(63,208,255,0.2)]' : 'bg-[#080d22] border-white/10'
+                  }`}>
+                    <div className="flex items-start justify-between">
+                      <div>
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400">Candidate B</span>
+                        <h4 className="text-xl font-black text-white mt-0.5">{cand2?.name || 'Candidate B'}</h4>
+                        <p className="text-xs text-gray-400">{job2?.title || 'Target Role'}</p>
+                      </div>
+                      <span className={`px-3 py-1 rounded-full text-sm font-black border ${getScoreBadge(score2).bg}`}>
+                        {score2}%
+                      </span>
+                    </div>
+
+                    <div className="mt-4 space-y-3 text-xs">
+                      <div className="p-3 rounded-xl bg-white/5 border border-white/10">
+                        <span className="text-[10px] text-gray-400 font-bold uppercase block">Contact &amp; Location</span>
+                        <span className="text-white font-semibold mt-0.5 block">{cand2?.email}</span>
+                        <span className="text-gray-400 text-[11px] block">{cand2?.phone} • {cand2?.experience}</span>
+                      </div>
+
+                      <div className="p-3 rounded-xl bg-white/5 border border-white/10">
+                        <span className="text-[10px] text-gray-400 font-bold uppercase block mb-1">Confirmed Role Skills</span>
+                        <div className="flex flex-wrap gap-1">
+                          {(app2.match_details?.required_skills_matched || []).map((s, i) => (
+                            <span key={i} className="px-2 py-0.5 rounded text-[10px] font-bold bg-green-950 text-green-300 border border-green-500/30">
+                              ✓ {s}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
+                      <div className="p-3 rounded-xl bg-white/5 border border-white/10">
+                        <span className="text-[10px] text-gray-400 font-bold uppercase block mb-1">Skill Gaps (Deficits)</span>
+                        <div className="flex flex-wrap gap-1">
+                          {(app2.match_details?.required_skills_missing || []).length > 0 ? (
+                            (app2.match_details?.required_skills_missing || []).map((s, i) => (
+                              <span key={i} className="px-2 py-0.5 rounded text-[10px] font-bold bg-red-950 text-red-300 border border-red-500/30">
+                                ✕ {s}
+                              </span>
+                            ))
+                          ) : (
+                            <span className="text-[11px] text-emerald-400 font-semibold">Zero gaps — Full required alignment</span>
+                          )}
+                        </div>
+                      </div>
+
+                      <div className="pt-2 flex items-center justify-between">
+                        <span className="text-xs text-gray-400 font-semibold">Stage: <strong className="text-white">{app2.stage}</strong></span>
+                        <button
+                          onClick={() => updateStage(app2.id, 'Interview')}
+                          className="px-3 py-1.5 bg-[#3fd0ff]/20 hover:bg-[#3fd0ff] border border-[#3fd0ff]/40 text-[#3fd0ff] hover:text-[#06091A] rounded-lg text-xs font-bold uppercase transition-all"
+                        >
+                          Advance to Interview
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                {/* Unique Competency Overlap Breakdown */}
+                <div className="elevate-card p-5 rounded-2xl border border-white/10 space-y-3">
+                  <h5 className="text-xs font-bold uppercase tracking-wider text-gray-300 flex items-center">
+                    <ArrowLeftRight className="w-3.5 h-3.5 text-[#ff8a3d] mr-1.5" />
+                    Unique Competencies Analysis
+                  </h5>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                    <div>
+                      <span className="text-gray-400 block mb-1 font-semibold">Exclusive to {cand1?.name}:</span>
+                      <div className="flex flex-wrap gap-1">
+                        {uniqueTo1.length > 0 ? uniqueTo1.map((s, i) => (
+                          <span key={i} className="px-2 py-0.5 rounded bg-[#ff8a3d]/15 text-[#ff8a3d] border border-[#ff8a3d]/30 text-[10px] font-bold">
+                            +{s}
+                          </span>
+                        )) : <span className="text-gray-500 italic">No unique skills</span>}
+                      </div>
+                    </div>
+                    <div>
+                      <span className="text-gray-400 block mb-1 font-semibold">Exclusive to {cand2?.name}:</span>
+                      <div className="flex flex-wrap gap-1">
+                        {uniqueTo2.length > 0 ? uniqueTo2.map((s, i) => (
+                          <span key={i} className="px-2 py-0.5 rounded bg-[#3fd0ff]/15 text-[#3fd0ff] border border-[#3fd0ff]/30 text-[10px] font-bold">
+                            +{s}
+                          </span>
+                        )) : <span className="text-gray-500 italic">No unique skills</span>}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              {/* Modal Footer */}
+              <div className="p-6 border-t border-white/10 bg-white/[0.02] flex justify-end items-center">
+                <button 
+                  onClick={() => setShowCompareModal(false)}
+                  className="px-6 py-2.5 bg-white/10 hover:bg-white/20 text-white rounded-xl text-xs font-bold uppercase tracking-wider transition-colors"
+                >
+                  Close Comparison
+                </button>
+              </div>
+
+            </div>
+          </div>
+        );
+      })()}
+
+      {/* ============================================================== */}
+      {/* 🔬 DEEP ANALYTICS MODAL */}
       {/* ============================================================== */}
       {selectedApp && (() => {
         const candidate = candidates.find(c => c.id === selectedApp.candidate_id);
         const job = jobs.find(j => j.id === selectedApp.job_id);
         
-        // Comprehensive fallback computation
         const candName = candidate?.name || 'Candidate ' + (selectedApp.candidate_id || '').slice(0, 8);
         const candEmail = candidate?.email || 'candidate@elevateiq-talent.in';
         const candPhone = candidate?.phone || '+91-9870000000';
@@ -486,11 +849,9 @@ function Applications() {
 
         const jobTitle = job?.title || 'Target Requisition ' + selectedApp.job_id;
         const jobLocation = job?.location || 'India Delivery Hub';
-        const jobDept = job?.department || 'Enterprise Solutions';
         const jobReqSkills = job?.required_skills || [];
         const jobPrefSkills = job?.preferred_skills || [];
 
-        // Match Decomposition
         const matchedReq = (selectedApp.match_details?.required_skills_matched && selectedApp.match_details.required_skills_matched.length > 0)
           ? selectedApp.match_details.required_skills_matched
           : candSkills.filter(s => jobReqSkills.map(j => j.toLowerCase()).includes(s.toLowerCase()));
@@ -533,7 +894,7 @@ function Applications() {
               {/* Modal Scrollable Body */}
               <div className="p-6 md:p-8 overflow-y-auto space-y-6">
                 
-                {/* Top Section: Candidate Profile & Score Dial */}
+                {/* Top Section */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   
                   {/* Candidate Overview Card */}
@@ -548,7 +909,6 @@ function Applications() {
                       </p>
                     </div>
 
-                    {/* Candidate Details Grid */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs pt-2">
                       <div className="p-3 bg-white/5 border border-white/10 rounded-xl">
                         <span className="text-[10px] font-bold uppercase tracking-wider text-gray-400 block">Email Contact</span>
@@ -568,7 +928,6 @@ function Applications() {
                       </div>
                     </div>
 
-                    {/* Cosine & Pipeline Badges */}
                     <div className="grid grid-cols-2 gap-3 pt-1">
                       <div className="p-3 bg-cyan-950/40 border border-[#3fd0ff]/30 rounded-xl">
                         <span className="block text-[10px] font-bold uppercase tracking-wider text-[#3fd0ff]">

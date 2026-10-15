@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Users, RefreshCw, UploadCloud, Eye, FileText, Sparkles, Phone, Mail, Search, MapPin, X } from 'lucide-react';
+import { 
+  Users, RefreshCw, UploadCloud, Eye, FileText, Sparkles, Phone, Mail, 
+  Search, MapPin, X, Target, Zap, Check, ArrowRight, Award, AlertCircle, CheckCircle
+} from 'lucide-react';
 
 const API_BASE = 'http://localhost:8000/api';
 
 function Candidates() {
   const [candidates, setCandidates] = useState([]);
+  const [jobs, setJobs] = useState([]);
   const [showForm, setShowForm] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', phone: '' });
   const [file, setFile] = useState(null);
@@ -13,9 +17,19 @@ function Candidates() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCandidate, setSelectedCandidate] = useState(null);
 
-  const fetchCandidates = () => axios.get(`${API_BASE}/candidates/`).then(res => setCandidates(res.data));
+  // 🎯 Button 3 State: Best Job Matcher Modal
+  const [bestMatchModal, setBestMatchModal] = useState(null);
+  const [assignedJobId, setAssignedJobId] = useState(null);
+  const [matchSuccessMsg, setMatchSuccessMsg] = useState('');
 
-  useEffect(() => { fetchCandidates(); }, []);
+  const fetchCandidates = () => {
+    axios.get(`${API_BASE}/candidates/`).then(res => setCandidates(res.data)).catch(err => console.error(err));
+    axios.get(`${API_BASE}/jobs/`).then(res => setJobs(res.data)).catch(err => console.error(err));
+  };
+
+  useEffect(() => { 
+    fetchCandidates(); 
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -45,6 +59,57 @@ function Candidates() {
     }
   };
 
+  // ==============================================================
+  // 🎯 BUTTON 3: FIND BEST JOB MATCH ALGORITHM
+  // ==============================================================
+  const handleFindBestMatch = (cand) => {
+    const candSkills = (cand.skills || []).map(s => s.toLowerCase());
+
+    const ranked = jobs.map(job => {
+      const req = job.required_skills || [];
+      const pref = job.preferred_skills || [];
+
+      const matchedReq = req.filter(r => candSkills.includes(r.toLowerCase()));
+      const missingReq = req.filter(r => !candSkills.includes(r.toLowerCase()));
+      const matchedPref = pref.filter(p => candSkills.includes(p.toLowerCase()));
+
+      // Calculate deterministic match score
+      const reqRatio = req.length > 0 ? (matchedReq.length / req.length) : 0.5;
+      const prefRatio = pref.length > 0 ? (matchedPref.length / pref.length) * 0.15 : 0;
+      const overall = Math.min(98.5, Math.max(15.0, Math.round((reqRatio * 0.82 + prefRatio + 0.12) * 100 * 10) / 10));
+
+      return {
+        ...job,
+        matchScore: overall,
+        matchedReq,
+        missingReq,
+        matchedPref
+      };
+    }).sort((a, b) => b.matchScore - a.matchScore);
+
+    setBestMatchModal({
+      candidate: cand,
+      rankedJobs: ranked
+    });
+    setAssignedJobId(null);
+    setMatchSuccessMsg('');
+  };
+
+  const handleAssignCandidateToJob = async (jobId, candId, jobTitle) => {
+    try {
+      await axios.post(`${API_BASE}/applications/`, {
+        job_id: jobId,
+        candidate_id: candId
+      });
+      setAssignedJobId(jobId);
+      setMatchSuccessMsg(`Candidate successfully assigned to "${jobTitle}"!`);
+      setTimeout(() => setMatchSuccessMsg(''), 4000);
+    } catch (err) {
+      console.error(err);
+      alert("Error assigning candidate to requisition");
+    }
+  };
+
   const filteredCandidates = candidates.filter(c => 
     c.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
     c.email?.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -52,7 +117,7 @@ function Candidates() {
   );
 
   return (
-    <div className="animate-fade-in-up text-white">
+    <div className="animate-fade-in-up text-white pb-16">
       
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-8 border-b border-white/10">
@@ -64,7 +129,7 @@ function Candidates() {
             Talent Pool Intelligence <span className="text-[#3fd0ff]">&gt;</span>
           </h2>
           <p className="text-gray-400 text-xs mt-1">
-            Directly browse parsed resumes, extracted skill vectors, and candidate telemetry across all delivery centers.
+            Browse parsed resumes, extracted skill vectors, and run reverse AI job matching across open requisitions.
           </p>
         </div>
         <div className="mt-4 sm:mt-0 flex gap-2">
@@ -161,14 +226,20 @@ function Candidates() {
               <tr><td colSpan="4" className="px-6 py-8 text-center text-gray-500 text-xs">No candidate records match your search.</td></tr>
             ) : filteredCandidates.map(c => (
               <tr key={c.id} className="hover:bg-white/[0.02] transition-colors">
+                
+                {/* Name */}
                 <td className="px-6 py-4 whitespace-nowrap">
                   <div className="font-bold text-white text-sm">{c.name}</div>
-                  <div className="text-[11px] text-gray-500">{c.experience || 'Verified Professional'}</div>
+                  <div className="text-[11px] text-gray-500">{c.experience || 'Verified Professional Profile'}</div>
                 </td>
+
+                {/* Contact */}
                 <td className="px-6 py-4 whitespace-nowrap text-xs text-gray-300">
                   <div className="flex items-center text-gray-300"><Mail className="w-3 h-3 text-[#3fd0ff] mr-1.5" /> {c.email}</div>
                   <div className="flex items-center text-gray-400 mt-1"><Phone className="w-3 h-3 text-gray-500 mr-1.5" /> {c.phone}</div>
                 </td>
+
+                {/* Skills Vector */}
                 <td className="px-6 py-4">
                   <div className="flex flex-wrap gap-1 max-w-md">
                     {c.skills && c.skills.map((skill, sIdx) => (
@@ -178,25 +249,205 @@ function Candidates() {
                     ))}
                   </div>
                 </td>
+
+                {/* Actions with Button 3: Find Best Job Match */}
                 <td className="px-6 py-4 whitespace-nowrap text-right text-xs">
+                  
+                  {/* 🎯 BUTTON 3: BEST JOB MATCH */}
+                  <button 
+                    onClick={() => handleFindBestMatch(c)} 
+                    className="px-3 py-1 bg-gradient-to-r from-cyan-600/30 to-blue-600/30 hover:from-[#3fd0ff] hover:to-cyan-400 border border-[#3fd0ff]/50 text-[#3fd0ff] hover:text-[#06091A] rounded-lg font-bold uppercase text-xs mr-2 transition-all shadow-[0_0_10px_rgba(63,208,255,0.2)] inline-flex items-center"
+                    title="Run AI scan against all 10 open positions to rank best job fits"
+                  >
+                    <Target className="w-3.5 h-3.5 mr-1" />
+                    Best Job Match
+                  </button>
+
                   <button 
                     onClick={() => setSelectedCandidate(c)} 
-                    className="px-3 py-1 bg-white/5 hover:bg-white/10 border border-white/10 text-white rounded-lg font-bold uppercase text-xs mr-2 transition-colors"
+                    className="px-3 py-1 bg-white/5 hover:bg-white/10 border border-white/10 text-white rounded-lg font-bold uppercase text-xs mr-2 transition-colors inline-flex items-center"
                   >
                     Profile
                   </button>
+
                   <button 
                     onClick={() => alert(`Downloading cached resume document for ${c.name}...`)} 
-                    className="px-3 py-1 bg-[#ff8a3d]/15 hover:bg-[#ff8a3d]/30 border border-[#ff8a3d]/40 text-[#ff8a3d] rounded-lg font-bold uppercase text-xs transition-colors"
+                    className="px-3 py-1 bg-[#ff8a3d]/15 hover:bg-[#ff8a3d]/30 border border-[#ff8a3d]/40 text-[#ff8a3d] rounded-lg font-bold uppercase text-xs transition-colors inline-flex items-center"
                   >
                     Resume
                   </button>
                 </td>
+
               </tr>
             ))}
           </tbody>
         </table>
       </div>
+
+      {/* ============================================================== */}
+      {/* 🎯 MODAL: BUTTON 3 - AI BEST POSITION MATCHER */}
+      {/* ============================================================== */}
+      {bestMatchModal && (() => {
+        const { candidate, rankedJobs } = bestMatchModal;
+        const topJob = rankedJobs[0];
+
+        return (
+          <div className="fixed inset-0 bg-black/85 backdrop-blur-md flex items-center justify-center z-50 p-4">
+            <div className="bg-[#0a0f24] border border-white/20 rounded-3xl max-w-4xl w-full overflow-hidden flex flex-col max-h-[92vh] shadow-[0_0_60px_rgba(63,208,255,0.35)] animate-fade-in-up">
+              
+              {/* Modal Header */}
+              <div className="p-6 border-b border-white/10 flex justify-between items-center bg-white/[0.02]">
+                <div>
+                  <div className="inline-flex items-center space-x-1.5 text-xs font-bold uppercase tracking-widest text-[#3fd0ff]">
+                    <Target className="w-3.5 h-3.5" /> AI Reverse Position Matcher
+                  </div>
+                  <h3 className="text-2xl font-black uppercase text-white mt-0.5">
+                    Best Requisition Fits for {candidate.name} &gt;
+                  </h3>
+                </div>
+                <button 
+                  onClick={() => setBestMatchModal(null)} 
+                  className="text-gray-400 hover:text-white p-2 rounded-full hover:bg-white/10 transition-colors"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+
+              {/* Success Notification */}
+              {matchSuccessMsg && (
+                <div className="mx-6 mt-4 p-3.5 rounded-xl bg-emerald-950/80 border border-emerald-500/50 text-emerald-300 text-xs font-bold flex items-center">
+                  <CheckCircle className="w-4 h-4 mr-2 text-emerald-400 flex-shrink-0" />
+                  <span>{matchSuccessMsg}</span>
+                </div>
+              )}
+
+              {/* Scrollable Content */}
+              <div className="p-6 md:p-8 overflow-y-auto space-y-6">
+                
+                {/* Candidate Summary Pill */}
+                <div className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+                  <div>
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400 block">Candidate Profile</span>
+                    <h4 className="text-lg font-black text-white">{candidate.name}</h4>
+                    <span className="text-xs text-gray-400">{candidate.email} • {candidate.phone}</span>
+                  </div>
+                  <div className="flex flex-wrap gap-1 max-w-sm">
+                    {candidate.skills?.map((s, i) => (
+                      <span key={i} className="px-2 py-0.5 rounded text-[10px] font-bold bg-[#3fd0ff]/15 text-[#3fd0ff] border border-[#3fd0ff]/30">
+                        {s}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Ranked Jobs List */}
+                <div className="space-y-3">
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-gray-300">
+                    Ranked Position Fits ({rankedJobs.length} Requisitions Evaluated)
+                  </h4>
+
+                  {rankedJobs.map((job, idx) => {
+                    const isTop = idx === 0;
+                    const isAssigned = assignedJobId === job.id;
+
+                    return (
+                      <div 
+                        key={job.id} 
+                        className={`p-4 rounded-2xl border transition-all flex flex-col md:flex-row justify-between items-start md:items-center gap-4 ${
+                          isTop 
+                            ? 'bg-gradient-to-r from-cyan-950/40 to-blue-950/30 border-[#3fd0ff]/60 shadow-[0_0_20px_rgba(63,208,255,0.2)]'
+                            : 'bg-white/[0.02] border-white/10 hover:border-white/20'
+                        }`}
+                      >
+                        <div className="flex-1">
+                          <div className="flex items-center space-x-2">
+                            <span className={`px-2 py-0.5 rounded-full text-[10px] font-black uppercase ${
+                              isTop ? 'bg-[#3fd0ff] text-[#06091A]' : 'bg-white/10 text-gray-300'
+                            }`}>
+                              #{idx + 1} Fit
+                            </span>
+                            <span className="text-[10px] text-[#ff8a3d] font-bold uppercase">
+                              {job.department}
+                            </span>
+                          </div>
+
+                          <h5 className="text-base font-bold text-white mt-1">
+                            {job.title}
+                          </h5>
+
+                          <div className="flex items-center text-xs text-gray-400 mt-1 space-x-3">
+                            <span className="flex items-center">
+                              <MapPin className="w-3 h-3 text-[#3fd0ff] mr-1" /> {job.location} Branch
+                            </span>
+                            <span>•</span>
+                            <span>{job.min_experience_years}+ Yrs Exp</span>
+                          </div>
+
+                          {/* Skill Overlap Preview */}
+                          <div className="flex flex-wrap gap-1 mt-2.5">
+                            {job.matchedReq.map((s, i) => (
+                              <span key={i} className="px-2 py-0.5 rounded text-[9px] font-bold bg-green-950 text-green-300 border border-green-500/30">
+                                ✓ {s}
+                              </span>
+                            ))}
+                            {job.missingReq.map((s, i) => (
+                              <span key={i} className="px-2 py-0.5 rounded text-[9px] font-bold bg-red-950 text-red-300 border border-red-500/30">
+                                ✕ {s}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Match Score & Assign Button */}
+                        <div className="flex md:flex-col items-center md:items-end justify-between w-full md:w-auto gap-3 flex-shrink-0">
+                          <span className={`px-3 py-1 rounded-full text-base font-black border ${
+                            job.matchScore >= 80 
+                              ? 'bg-emerald-950/80 text-emerald-300 border-emerald-500/40' 
+                              : job.matchScore >= 60 
+                              ? 'bg-cyan-950/80 text-[#3fd0ff] border-[#3fd0ff]/40' 
+                              : 'bg-orange-950/80 text-[#ff8a3d] border-[#ff8a3d]/40'
+                          }`}>
+                            {job.matchScore}%
+                          </span>
+
+                          <button
+                            onClick={() => handleAssignCandidateToJob(job.id, candidate.id, job.title)}
+                            disabled={isAssigned}
+                            className={`px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all flex items-center whitespace-nowrap ${
+                              isAssigned 
+                                ? 'bg-emerald-600 text-white cursor-default'
+                                : 'bg-gradient-to-r from-[#ff8a3d] to-[#f2701c] hover:brightness-110 text-white shadow-[0_0_15px_rgba(255,138,61,0.3)]'
+                            }`}
+                          >
+                            {isAssigned ? (
+                              <><Check className="w-3.5 h-3.5 mr-1" /> Assigned</>
+                            ) : (
+                              <><Zap className="w-3.5 h-3.5 mr-1" /> Assign to Job</>
+                            )}
+                          </button>
+                        </div>
+
+                      </div>
+                    );
+                  })}
+                </div>
+
+              </div>
+
+              {/* Modal Footer */}
+              <div className="p-6 border-t border-white/10 bg-white/[0.02] flex justify-end">
+                <button 
+                  onClick={() => setBestMatchModal(null)} 
+                  className="px-6 py-2.5 bg-white/10 hover:bg-white/20 text-white rounded-xl text-xs font-bold uppercase tracking-wider transition-colors"
+                >
+                  Close Matcher
+                </button>
+              </div>
+
+            </div>
+          </div>
+        );
+      })()}
 
       {/* Candidate Profile Modal */}
       {selectedCandidate && (
