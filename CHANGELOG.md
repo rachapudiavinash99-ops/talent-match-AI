@@ -113,3 +113,4 @@
 - Patch v2.113: add zero-leakage local validation guarantee check
 - Patch v2.114: refine recruiter stage change audit log timestamps
 - Patch v2.115: update candidate search index with smart case-folding
+- Patch v2.116: improve mobile responsiveness on careers public portal
