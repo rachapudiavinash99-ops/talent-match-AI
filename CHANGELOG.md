@@ -8,3 +8,4 @@
 - Patch v2.008: enhance filelock retry backoff jitter during concurrent writes
 - Patch v2.009: add benchmark telemetry for candidate vector scoring speed
 - Patch v2.010: expand skill synonyms for Kubernetes, Docker and Cloud DevOps
+- Patch v2.011: optimize memory footprint during large corpus batch loading
