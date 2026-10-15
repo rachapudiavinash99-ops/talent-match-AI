@@ -39,7 +39,6 @@ function LoginScreen() {
           />
           <span className="text-3xl font-black tracking-tight text-white flex items-center">
             Elevate<span className="text-[#3fd0ff]">IQ</span>
-            <span className="text-[#ff8a3d] text-4xl font-black ml-0.5 leading-none">.</span>
           </span>
         </a>
         <h2 className="text-2xl font-black uppercase tracking-tight text-white">
@@ -133,7 +132,6 @@ function AdminLayout({ children }) {
               />
               <span className="text-2xl font-black tracking-tight text-white">
                 Elevate<span className="text-[#3fd0ff]">IQ</span>
-                <span className="text-[#ff8a3d] text-2xl font-black">.</span>
               </span>
             </Link>
             <p className="text-[10px] font-bold uppercase tracking-widest text-[#ff8a3d] mt-1">

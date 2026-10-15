@@ -111,13 +111,9 @@ function ElevateIQHome() {
                 className="h-10 w-auto object-contain filter drop-shadow-[0_0_12px_rgba(63,208,255,0.4)]"
                 onError={(e) => { e.target.style.display = 'none'; }}
               />
-              <div className="flex flex-col">
+              <div className="flex items-center">
                 <span className="text-2xl font-black tracking-tight text-white flex items-center">
                   Elevate<span className="text-[#3fd0ff]">IQ</span>
-                  <span className="text-[#ff8a3d] text-3xl font-black ml-0.5 leading-none">.</span>
-                </span>
-                <span className="text-[9px] uppercase tracking-widest text-gray-400 font-bold -mt-1">
-                  Soft Tech Pvt. Ltd.
                 </span>
               </div>
             </a>
@@ -715,7 +711,6 @@ function ElevateIQHome() {
             <div className="md:col-span-2">
               <div className="flex items-center space-x-2 mb-3">
                 <span className="text-2xl font-black text-white">Elevate<span className="text-[#3fd0ff]">IQ</span></span>
-                <span className="text-[#ff8a3d] text-3xl font-black">.</span>
               </div>
               <p className="text-xs text-gray-400 leading-relaxed max-w-sm mb-6">
                 ElevateIQ Soft Tech Private Limited is a premier technology &amp; business solutions provider delivering custom enterprise software, cloud infrastructure, medical billing, and AI talent intelligence.
