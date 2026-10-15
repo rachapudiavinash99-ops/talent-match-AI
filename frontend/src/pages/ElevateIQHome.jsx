@@ -104,18 +104,12 @@ function ElevateIQHome() {
           
           {/* ElevateIQ Brand Logo */}
           <div className="flex items-center space-x-10">
-            <a href="/" className="flex items-center space-x-3 group">
+            <a href="/" className="flex items-center group">
               <img 
                 src="https://elevateiq-softtech.com/images/logo.png" 
-                alt="ElevateIQ Soft Tech" 
-                className="h-10 w-auto object-contain filter drop-shadow-[0_0_12px_rgba(63,208,255,0.4)]"
-                onError={(e) => { e.target.style.display = 'none'; }}
+                alt="ElevateIQ" 
+                className="h-11 w-auto object-contain filter drop-shadow-[0_0_12px_rgba(63,208,255,0.4)] hover:scale-105 transition-transform"
               />
-              <div className="flex items-center">
-                <span className="text-2xl font-black tracking-tight text-white flex items-center">
-                  Elevate<span className="text-[#3fd0ff]">IQ</span>
-                </span>
-              </div>
             </a>
 
             {/* Corporate Nav Menu */}
@@ -709,8 +703,12 @@ function ElevateIQHome() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-14">
             
             <div className="md:col-span-2">
-              <div className="flex items-center space-x-2 mb-3">
-                <span className="text-2xl font-black text-white">Elevate<span className="text-[#3fd0ff]">IQ</span></span>
+              <div className="flex items-center mb-4">
+                <img 
+                  src="https://elevateiq-softtech.com/images/logo.png" 
+                  alt="ElevateIQ" 
+                  className="h-9 w-auto object-contain filter drop-shadow-[0_0_12px_rgba(63,208,255,0.4)]"
+                />
               </div>
               <p className="text-xs text-gray-400 leading-relaxed max-w-sm mb-6">
                 ElevateIQ Soft Tech Private Limited is a premier technology &amp; business solutions provider delivering custom enterprise software, cloud infrastructure, medical billing, and AI talent intelligence.

@@ -30,16 +30,12 @@ function LoginScreen() {
       <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-[#3fd0ff]/15 rounded-full blur-[140px] pointer-events-none"></div>
       
       <div className="sm:mx-auto sm:w-full sm:max-w-md relative z-10 text-center animate-fade-in-up">
-        <a href="/" className="inline-flex items-center space-x-2 mb-6 group">
+        <a href="/" className="inline-flex items-center justify-center mb-6 group">
           <img 
             src="https://elevateiq-softtech.com/images/logo.png" 
-            alt="ElevateIQ Soft Tech" 
-            className="h-10 w-auto object-contain filter drop-shadow-[0_0_12px_rgba(63,208,255,0.4)]"
-            onError={(e) => { e.target.style.display = 'none'; }}
+            alt="ElevateIQ" 
+            className="h-12 w-auto object-contain filter drop-shadow-[0_0_12px_rgba(63,208,255,0.4)] hover:scale-105 transition-transform"
           />
-          <span className="text-3xl font-black tracking-tight text-white flex items-center">
-            Elevate<span className="text-[#3fd0ff]">IQ</span>
-          </span>
         </a>
         <h2 className="text-2xl font-black uppercase tracking-tight text-white">
           Recruiter Command Center
@@ -123,16 +119,12 @@ function AdminLayout({ children }) {
         <div>
           {/* Logo */}
           <div className="p-6 border-b border-white/10">
-            <Link to="/" className="flex items-center space-x-2 group">
+            <Link to="/" className="flex items-center group">
               <img 
                 src="https://elevateiq-softtech.com/images/logo.png" 
                 alt="ElevateIQ" 
-                className="h-8 w-auto object-contain"
-                onError={(e) => { e.target.style.display = 'none'; }}
+                className="h-9 w-auto object-contain hover:scale-105 transition-transform"
               />
-              <span className="text-2xl font-black tracking-tight text-white">
-                Elevate<span className="text-[#3fd0ff]">IQ</span>
-              </span>
             </Link>
             <p className="text-[10px] font-bold uppercase tracking-widest text-[#ff8a3d] mt-1">
               Recruiter Console
