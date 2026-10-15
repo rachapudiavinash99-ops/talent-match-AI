@@ -1,244 +1,1179 @@
 [
     {
-        "id": "eiq-app-1",
+        "id": "eiq-app-auto-1",
         "job_id": "eiq-job-1",
-        "candidate_id": "eiq-cand-1",
-        "stage": "Applied",
-        "match_score": 97.0,
+        "candidate_id": "eiq-cand-auto-1",
+        "stage": "Offer",
+        "notes": "Screened profile from Chennai. Competency score verified against job skill vectors.",
+        "match_score": 96.5,
         "match_details": {
-            "overall_score": 97.0,
+            "overall_score": 96.5,
+            "cosine_similarity": 92.93,
             "required_skills_matched": [
+                "react",
                 "python",
                 "fastapi",
-                "react",
                 "sql"
+            ],
+            "required_skills_missing": [],
+            "preferred_skills_matched": [
+                "docker",
+                "next.js"
+            ]
+        },
+        "created_at": "2026-10-11T16:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-2",
+        "job_id": "eiq-job-1",
+        "candidate_id": "eiq-cand-auto-2",
+        "stage": "Interview",
+        "notes": "Screened profile from Bengaluru. Competency score verified against job skill vectors.",
+        "match_score": 86.0,
+        "match_details": {
+            "overall_score": 86.0,
+            "cosine_similarity": 80.92,
+            "required_skills_matched": [
+                "react",
+                "python",
+                "fastapi"
+            ],
+            "required_skills_missing": [
+                "sql"
+            ],
+            "preferred_skills_matched": [
+                "next.js"
+            ]
+        },
+        "created_at": "2026-10-11T13:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-3",
+        "job_id": "eiq-job-1",
+        "candidate_id": "eiq-cand-auto-3",
+        "stage": "Shortlisted",
+        "notes": "Screened profile from Hyderabad. Competency score verified against job skill vectors.",
+        "match_score": 73.5,
+        "match_details": {
+            "overall_score": 73.5,
+            "cosine_similarity": 68.88,
+            "required_skills_matched": [
+                "react",
+                "python",
+                "sql"
+            ],
+            "required_skills_missing": [
+                "fastapi"
+            ],
+            "preferred_skills_matched": []
+        },
+        "created_at": "2026-10-11T13:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-4",
+        "job_id": "eiq-job-1",
+        "candidate_id": "eiq-cand-auto-4",
+        "stage": "Under Review",
+        "notes": "Screened profile from Chennai. Competency score verified against job skill vectors.",
+        "match_score": 58.0,
+        "match_details": {
+            "overall_score": 58.0,
+            "cosine_similarity": 50.9,
+            "required_skills_matched": [
+                "python",
+                "sql"
+            ],
+            "required_skills_missing": [
+                "react",
+                "fastapi"
             ],
             "preferred_skills_matched": [
                 "docker"
             ]
         },
-        "created_at": "2026-10-14T15:31:22.887668"
+        "created_at": "2026-10-11T02:44:54.160659"
     },
     {
-        "id": "eiq-app-2",
-        "job_id": "eiq-job-2",
-        "candidate_id": "eiq-cand-2",
-        "stage": "Interview",
-        "match_score": 97.0,
+        "id": "eiq-app-auto-5",
+        "job_id": "eiq-job-1",
+        "candidate_id": "eiq-cand-auto-5",
+        "stage": "Applied",
+        "notes": "Screened profile from Pune. Competency score verified against job skill vectors.",
+        "match_score": 41.5,
         "match_details": {
-            "overall_score": 97.0,
+            "overall_score": 41.5,
+            "cosine_similarity": 37.97,
+            "required_skills_matched": [
+                "react"
+            ],
+            "required_skills_missing": [
+                "python",
+                "fastapi",
+                "sql"
+            ],
+            "preferred_skills_matched": []
+        },
+        "created_at": "2026-10-12T08:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-6",
+        "job_id": "eiq-job-2",
+        "candidate_id": "eiq-cand-auto-6",
+        "stage": "Offer",
+        "notes": "Screened profile from Kochi. Competency score verified against job skill vectors.",
+        "match_score": 97.2,
+        "match_details": {
+            "overall_score": 97.2,
+            "cosine_similarity": 90.89,
             "required_skills_matched": [
                 "python",
+                "web scraping",
                 "selenium",
+                "sql"
+            ],
+            "required_skills_missing": [],
+            "preferred_skills_matched": [
+                "scrapy"
+            ]
+        },
+        "created_at": "2026-10-14T02:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-7",
+        "job_id": "eiq-job-2",
+        "candidate_id": "eiq-cand-auto-7",
+        "stage": "Interview",
+        "notes": "Screened profile from Hyderabad. Competency score verified against job skill vectors.",
+        "match_score": 85.4,
+        "match_details": {
+            "overall_score": 85.4,
+            "cosine_similarity": 79.5,
+            "required_skills_matched": [
+                "python",
+                "web scraping",
+                "selenium"
+            ],
+            "required_skills_missing": [
+                "sql"
+            ],
+            "preferred_skills_matched": [
+                "proxy rotation"
+            ]
+        },
+        "created_at": "2026-10-14T12:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-8",
+        "job_id": "eiq-job-2",
+        "candidate_id": "eiq-cand-auto-8",
+        "stage": "Shortlisted",
+        "notes": "Screened profile from Bengaluru. Competency score verified against job skill vectors.",
+        "match_score": 74.0,
+        "match_details": {
+            "overall_score": 74.0,
+            "cosine_similarity": 69.63,
+            "required_skills_matched": [
+                "python",
                 "web scraping",
                 "sql"
+            ],
+            "required_skills_missing": [
+                "selenium"
+            ],
+            "preferred_skills_matched": []
+        },
+        "created_at": "2026-10-12T02:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-9",
+        "job_id": "eiq-job-2",
+        "candidate_id": "eiq-cand-auto-9",
+        "stage": "Under Review",
+        "notes": "Screened profile from Chennai. Competency score verified against job skill vectors.",
+        "match_score": 57.5,
+        "match_details": {
+            "overall_score": 57.5,
+            "cosine_similarity": 50.66,
+            "required_skills_matched": [
+                "python",
+                "sql"
+            ],
+            "required_skills_missing": [
+                "web scraping",
+                "selenium"
             ],
             "preferred_skills_matched": [
                 "scrapy"
             ]
         },
-        "created_at": "2026-10-14T15:31:22.887668"
+        "created_at": "2026-10-12T14:44:54.160659"
     },
     {
-        "id": "eiq-app-3",
-        "job_id": "eiq-job-3",
-        "candidate_id": "eiq-cand-3",
-        "stage": "Offer",
-        "match_score": 97.0,
+        "id": "eiq-app-auto-10",
+        "job_id": "eiq-job-2",
+        "candidate_id": "eiq-cand-auto-10",
+        "stage": "Applied",
+        "notes": "Screened profile from Hyderabad. Competency score verified against job skill vectors.",
+        "match_score": 39.0,
         "match_details": {
-            "overall_score": 97.0,
+            "overall_score": 39.0,
+            "cosine_similarity": 34.18,
             "required_skills_matched": [
+                "python"
+            ],
+            "required_skills_missing": [
+                "web scraping",
+                "selenium",
+                "sql"
+            ],
+            "preferred_skills_matched": []
+        },
+        "created_at": "2026-10-11T01:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-11",
+        "job_id": "eiq-job-3",
+        "candidate_id": "eiq-cand-auto-11",
+        "stage": "Offer",
+        "notes": "Screened profile from Kochi. Competency score verified against job skill vectors.",
+        "match_score": 98.4,
+        "match_details": {
+            "overall_score": 98.4,
+            "cosine_similarity": 91.74,
+            "required_skills_matched": [
+                "aws",
                 "docker",
                 "kubernetes",
-                "linux",
-                "aws"
+                "linux"
+            ],
+            "required_skills_missing": [],
+            "preferred_skills_matched": [
+                "terraform",
+                "ci/cd"
+            ]
+        },
+        "created_at": "2026-10-13T11:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-12",
+        "job_id": "eiq-job-3",
+        "candidate_id": "eiq-cand-auto-12",
+        "stage": "Interview",
+        "notes": "Screened profile from Thiruvananthapuram. Competency score verified against job skill vectors.",
+        "match_score": 86.8,
+        "match_details": {
+            "overall_score": 86.8,
+            "cosine_similarity": 79.7,
+            "required_skills_matched": [
+                "aws",
+                "docker",
+                "linux"
+            ],
+            "required_skills_missing": [
+                "kubernetes"
+            ],
+            "preferred_skills_matched": [
+                "ci/cd"
+            ]
+        },
+        "created_at": "2026-10-11T11:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-13",
+        "job_id": "eiq-job-3",
+        "candidate_id": "eiq-cand-auto-13",
+        "stage": "Shortlisted",
+        "notes": "Screened profile from Kochi. Competency score verified against job skill vectors.",
+        "match_score": 72.5,
+        "match_details": {
+            "overall_score": 72.5,
+            "cosine_similarity": 65.53,
+            "required_skills_matched": [
+                "aws",
+                "docker",
+                "linux"
+            ],
+            "required_skills_missing": [
+                "kubernetes"
+            ],
+            "preferred_skills_matched": []
+        },
+        "created_at": "2026-10-11T04:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-14",
+        "job_id": "eiq-job-3",
+        "candidate_id": "eiq-cand-auto-14",
+        "stage": "Under Review",
+        "notes": "Screened profile from Bengaluru. Competency score verified against job skill vectors.",
+        "match_score": 56.0,
+        "match_details": {
+            "overall_score": 56.0,
+            "cosine_similarity": 51.02,
+            "required_skills_matched": [
+                "docker",
+                "linux"
+            ],
+            "required_skills_missing": [
+                "aws",
+                "kubernetes"
             ],
             "preferred_skills_matched": [
                 "terraform"
             ]
         },
-        "created_at": "2026-10-14T15:31:22.887668"
+        "created_at": "2026-10-12T10:44:54.160659"
     },
     {
-        "id": "eiq-app-4",
-        "job_id": "eiq-job-4",
-        "candidate_id": "eiq-cand-4",
-        "stage": "Shortlisted",
-        "match_score": 97.0,
+        "id": "eiq-app-auto-15",
+        "job_id": "eiq-job-3",
+        "candidate_id": "eiq-cand-auto-15",
+        "stage": "Rejected",
+        "notes": "Screened profile from Noida. Competency score verified against job skill vectors.",
+        "match_score": 38.2,
         "match_details": {
-            "overall_score": 97.0,
+            "overall_score": 38.2,
+            "cosine_similarity": 34.22,
             "required_skills_matched": [
+                "linux"
+            ],
+            "required_skills_missing": [
+                "aws",
+                "docker",
+                "kubernetes"
+            ],
+            "preferred_skills_matched": []
+        },
+        "created_at": "2026-10-12T01:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-16",
+        "job_id": "eiq-job-4",
+        "candidate_id": "eiq-cand-auto-16",
+        "stage": "Offer",
+        "notes": "Screened profile from Chennai. Competency score verified against job skill vectors.",
+        "match_score": 96.8,
+        "match_details": {
+            "overall_score": 96.8,
+            "cosine_similarity": 89.16,
+            "required_skills_matched": [
+                "python",
                 "ocr",
+                "nlp",
+                "machine learning"
+            ],
+            "required_skills_missing": [],
+            "preferred_skills_matched": [
+                "layoutlm",
+                "tensorflow"
+            ]
+        },
+        "created_at": "2026-10-12T20:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-17",
+        "job_id": "eiq-job-4",
+        "candidate_id": "eiq-cand-auto-17",
+        "stage": "Interview",
+        "notes": "Screened profile from Bengaluru. Competency score verified against job skill vectors.",
+        "match_score": 87.5,
+        "match_details": {
+            "overall_score": 87.5,
+            "cosine_similarity": 81.04,
+            "required_skills_matched": [
                 "python",
                 "nlp",
+                "machine learning"
+            ],
+            "required_skills_missing": [
+                "ocr"
+            ],
+            "preferred_skills_matched": [
+                "layoutlm"
+            ]
+        },
+        "created_at": "2026-10-12T00:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-18",
+        "job_id": "eiq-job-4",
+        "candidate_id": "eiq-cand-auto-18",
+        "stage": "Shortlisted",
+        "notes": "Screened profile from Hyderabad. Competency score verified against job skill vectors.",
+        "match_score": 75.0,
+        "match_details": {
+            "overall_score": 75.0,
+            "cosine_similarity": 69.62,
+            "required_skills_matched": [
+                "python",
+                "ocr",
+                "machine learning"
+            ],
+            "required_skills_missing": [
+                "nlp"
+            ],
+            "preferred_skills_matched": []
+        },
+        "created_at": "2026-10-11T05:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-19",
+        "job_id": "eiq-job-4",
+        "candidate_id": "eiq-cand-auto-19",
+        "stage": "Under Review",
+        "notes": "Screened profile from Kolkata. Competency score verified against job skill vectors.",
+        "match_score": 59.2,
+        "match_details": {
+            "overall_score": 59.2,
+            "cosine_similarity": 51.26,
+            "required_skills_matched": [
+                "python",
+                "nlp"
+            ],
+            "required_skills_missing": [
+                "ocr",
                 "machine learning"
             ],
             "preferred_skills_matched": [
                 "tensorflow"
             ]
         },
-        "created_at": "2026-10-14T15:31:22.887668"
+        "created_at": "2026-10-14T13:44:54.160659"
     },
     {
-        "id": "eiq-app-5",
-        "job_id": "eiq-job-5",
-        "candidate_id": "eiq-cand-5",
+        "id": "eiq-app-auto-20",
+        "job_id": "eiq-job-4",
+        "candidate_id": "eiq-cand-auto-20",
         "stage": "Applied",
-        "match_score": 97.0,
+        "notes": "Screened profile from Bhubaneswar. Competency score verified against job skill vectors.",
+        "match_score": 43.0,
         "match_details": {
-            "overall_score": 97.0,
+            "overall_score": 43.0,
+            "cosine_similarity": 37.99,
+            "required_skills_matched": [
+                "python"
+            ],
+            "required_skills_missing": [
+                "ocr",
+                "nlp",
+                "machine learning"
+            ],
+            "preferred_skills_matched": []
+        },
+        "created_at": "2026-10-12T03:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-21",
+        "job_id": "eiq-job-5",
+        "candidate_id": "eiq-cand-auto-21",
+        "stage": "Offer",
+        "notes": "Screened profile from Vijayawada. Competency score verified against job skill vectors.",
+        "match_score": 95.5,
+        "match_details": {
+            "overall_score": 95.5,
+            "cosine_similarity": 90.19,
             "required_skills_matched": [
                 "computer vision",
+                "annotation",
                 "nlp",
+                "quality audit"
+            ],
+            "required_skills_missing": [],
+            "preferred_skills_matched": [
+                "labeling"
+            ]
+        },
+        "created_at": "2026-10-12T16:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-22",
+        "job_id": "eiq-job-5",
+        "candidate_id": "eiq-cand-auto-22",
+        "stage": "Interview",
+        "notes": "Screened profile from Guntur. Competency score verified against job skill vectors.",
+        "match_score": 84.8,
+        "match_details": {
+            "overall_score": 84.8,
+            "cosine_similarity": 80.2,
+            "required_skills_matched": [
+                "computer vision",
                 "annotation",
                 "quality audit"
+            ],
+            "required_skills_missing": [
+                "nlp"
+            ],
+            "preferred_skills_matched": [
+                "python"
+            ]
+        },
+        "created_at": "2026-10-11T12:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-23",
+        "job_id": "eiq-job-5",
+        "candidate_id": "eiq-cand-auto-23",
+        "stage": "Shortlisted",
+        "notes": "Screened profile from Narasaraopet. Competency score verified against job skill vectors.",
+        "match_score": 71.5,
+        "match_details": {
+            "overall_score": 71.5,
+            "cosine_similarity": 64.42,
+            "required_skills_matched": [
+                "annotation",
+                "nlp",
+                "quality audit"
+            ],
+            "required_skills_missing": [
+                "computer vision"
             ],
             "preferred_skills_matched": [
                 "labeling"
             ]
         },
-        "created_at": "2026-10-14T15:31:22.887668"
+        "created_at": "2026-10-13T20:44:54.160659"
     },
     {
-        "id": "eiq-app-6",
-        "job_id": "eiq-job-6",
-        "candidate_id": "eiq-cand-6",
-        "stage": "Interview",
-        "match_score": 97.0,
+        "id": "eiq-app-auto-24",
+        "job_id": "eiq-job-5",
+        "candidate_id": "eiq-cand-auto-24",
+        "stage": "Under Review",
+        "notes": "Screened profile from Mangaluru. Competency score verified against job skill vectors.",
+        "match_score": 54.0,
         "match_details": {
-            "overall_score": 97.0,
+            "overall_score": 54.0,
+            "cosine_similarity": 49.17,
+            "required_skills_matched": [
+                "annotation",
+                "quality audit"
+            ],
+            "required_skills_missing": [
+                "computer vision",
+                "nlp"
+            ],
+            "preferred_skills_matched": []
+        },
+        "created_at": "2026-10-13T18:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-25",
+        "job_id": "eiq-job-5",
+        "candidate_id": "eiq-cand-auto-25",
+        "stage": "Applied",
+        "notes": "Screened profile from Visakhapatnam. Competency score verified against job skill vectors.",
+        "match_score": 37.5,
+        "match_details": {
+            "overall_score": 37.5,
+            "cosine_similarity": 29.53,
+            "required_skills_matched": [
+                "annotation"
+            ],
+            "required_skills_missing": [
+                "computer vision",
+                "nlp",
+                "quality audit"
+            ],
+            "preferred_skills_matched": []
+        },
+        "created_at": "2026-10-13T22:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-26",
+        "job_id": "eiq-job-6",
+        "candidate_id": "eiq-cand-auto-26",
+        "stage": "Offer",
+        "notes": "Screened profile from Chennai. Competency score verified against job skill vectors.",
+        "match_score": 97.6,
+        "match_details": {
+            "overall_score": 97.6,
+            "cosine_similarity": 90.86,
             "required_skills_matched": [
                 "medical coding",
                 "icd-10",
                 "cpt",
                 "hipaa"
             ],
+            "required_skills_missing": [],
             "preferred_skills_matched": [
                 "rcm"
             ]
         },
-        "created_at": "2026-10-14T15:31:22.887668"
+        "created_at": "2026-10-12T14:44:54.160659"
     },
     {
-        "id": "eiq-app-7",
-        "job_id": "eiq-job-7",
-        "candidate_id": "eiq-cand-7",
-        "stage": "Offer",
-        "match_score": 97.0,
+        "id": "eiq-app-auto-27",
+        "job_id": "eiq-job-6",
+        "candidate_id": "eiq-cand-auto-27",
+        "stage": "Interview",
+        "notes": "Screened profile from Coimbatore. Competency score verified against job skill vectors.",
+        "match_score": 88.4,
         "match_details": {
-            "overall_score": 97.0,
+            "overall_score": 88.4,
+            "cosine_similarity": 81.27,
             "required_skills_matched": [
-                "communication",
+                "medical coding",
+                "icd-10",
+                "cpt"
+            ],
+            "required_skills_missing": [
+                "hipaa"
+            ],
+            "preferred_skills_matched": [
+                "claims audit"
+            ]
+        },
+        "created_at": "2026-10-12T13:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-28",
+        "job_id": "eiq-job-6",
+        "candidate_id": "eiq-cand-auto-28",
+        "stage": "Shortlisted",
+        "notes": "Screened profile from Madurai. Competency score verified against job skill vectors.",
+        "match_score": 76.2,
+        "match_details": {
+            "overall_score": 76.2,
+            "cosine_similarity": 70.6,
+            "required_skills_matched": [
+                "medical coding",
+                "icd-10",
+                "hipaa"
+            ],
+            "required_skills_missing": [
+                "cpt"
+            ],
+            "preferred_skills_matched": []
+        },
+        "created_at": "2026-10-12T22:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-29",
+        "job_id": "eiq-job-6",
+        "candidate_id": "eiq-cand-auto-29",
+        "stage": "Under Review",
+        "notes": "Screened profile from Chennai. Competency score verified against job skill vectors.",
+        "match_score": 62.0,
+        "match_details": {
+            "overall_score": 62.0,
+            "cosine_similarity": 55.05,
+            "required_skills_matched": [
+                "medical coding",
+                "hipaa"
+            ],
+            "required_skills_missing": [
+                "icd-10",
+                "cpt"
+            ],
+            "preferred_skills_matched": [
+                "rcm"
+            ]
+        },
+        "created_at": "2026-10-11T09:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-30",
+        "job_id": "eiq-job-6",
+        "candidate_id": "eiq-cand-auto-30",
+        "stage": "Applied",
+        "notes": "Screened profile from Kollam. Competency score verified against job skill vectors.",
+        "match_score": 44.5,
+        "match_details": {
+            "overall_score": 44.5,
+            "cosine_similarity": 38.27,
+            "required_skills_matched": [
+                "medical coding"
+            ],
+            "required_skills_missing": [
+                "icd-10",
+                "cpt",
+                "hipaa"
+            ],
+            "preferred_skills_matched": []
+        },
+        "created_at": "2026-10-12T08:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-31",
+        "job_id": "eiq-job-7",
+        "candidate_id": "eiq-cand-auto-31",
+        "stage": "Offer",
+        "notes": "Screened profile from Kochi. Competency score verified against job skill vectors.",
+        "match_score": 96.2,
+        "match_details": {
+            "overall_score": 96.2,
+            "cosine_similarity": 88.9,
+            "required_skills_matched": [
+                "ar calling",
+                "denial management",
+                "revenue cycle",
+                "communication"
+            ],
+            "required_skills_missing": [],
+            "preferred_skills_matched": [
+                "insurance follow-up"
+            ]
+        },
+        "created_at": "2026-10-12T00:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-32",
+        "job_id": "eiq-job-7",
+        "candidate_id": "eiq-cand-auto-32",
+        "stage": "Interview",
+        "notes": "Screened profile from Thrissur. Competency score verified against job skill vectors.",
+        "match_score": 86.5,
+        "match_details": {
+            "overall_score": 86.5,
+            "cosine_similarity": 80.49,
+            "required_skills_matched": [
+                "ar calling",
+                "denial management",
+                "communication"
+            ],
+            "required_skills_missing": [
+                "revenue cycle"
+            ],
+            "preferred_skills_matched": [
+                "insurance follow-up"
+            ]
+        },
+        "created_at": "2026-10-13T06:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-33",
+        "job_id": "eiq-job-7",
+        "candidate_id": "eiq-cand-auto-33",
+        "stage": "Shortlisted",
+        "notes": "Screened profile from Calicut. Competency score verified against job skill vectors.",
+        "match_score": 73.8,
+        "match_details": {
+            "overall_score": 73.8,
+            "cosine_similarity": 69.41,
+            "required_skills_matched": [
+                "ar calling",
+                "revenue cycle",
+                "communication"
+            ],
+            "required_skills_missing": [
+                "denial management"
+            ],
+            "preferred_skills_matched": []
+        },
+        "created_at": "2026-10-11T01:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-34",
+        "job_id": "eiq-job-7",
+        "candidate_id": "eiq-cand-auto-34",
+        "stage": "Under Review",
+        "notes": "Screened profile from Kochi. Competency score verified against job skill vectors.",
+        "match_score": 58.2,
+        "match_details": {
+            "overall_score": 58.2,
+            "cosine_similarity": 52.16,
+            "required_skills_matched": [
+                "ar calling",
+                "communication"
+            ],
+            "required_skills_missing": [
+                "denial management",
+                "revenue cycle"
+            ],
+            "preferred_skills_matched": [
+                "insurance follow-up"
+            ]
+        },
+        "created_at": "2026-10-14T01:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-35",
+        "job_id": "eiq-job-7",
+        "candidate_id": "eiq-cand-auto-35",
+        "stage": "Applied",
+        "notes": "Screened profile from Palakkad. Competency score verified against job skill vectors.",
+        "match_score": 40.0,
+        "match_details": {
+            "overall_score": 40.0,
+            "cosine_similarity": 32.67,
+            "required_skills_matched": [
+                "communication"
+            ],
+            "required_skills_missing": [
                 "ar calling",
                 "denial management",
                 "revenue cycle"
             ],
             "preferred_skills_matched": []
         },
-        "created_at": "2026-10-14T15:31:22.887668"
+        "created_at": "2026-10-12T16:44:54.160659"
     },
     {
-        "id": "eiq-app-8",
+        "id": "eiq-app-auto-36",
         "job_id": "eiq-job-8",
-        "candidate_id": "eiq-cand-8",
-        "stage": "Shortlisted",
-        "match_score": 97.0,
+        "candidate_id": "eiq-cand-auto-36",
+        "stage": "Offer",
+        "notes": "Screened profile from Narasaraopet. Competency score verified against job skill vectors.",
+        "match_score": 95.8,
         "match_details": {
-            "overall_score": 97.0,
+            "overall_score": 95.8,
+            "cosine_similarity": 91.3,
             "required_skills_matched": [
-                "communication",
-                "quality assurance",
                 "customer support",
+                "tele-evaluation",
+                "quality assurance",
+                "communication"
+            ],
+            "required_skills_missing": [],
+            "preferred_skills_matched": [
+                "helpdesk"
+            ]
+        },
+        "created_at": "2026-10-14T08:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-37",
+        "job_id": "eiq-job-8",
+        "candidate_id": "eiq-cand-auto-37",
+        "stage": "Interview",
+        "notes": "Screened profile from Guntur. Competency score verified against job skill vectors.",
+        "match_score": 85.6,
+        "match_details": {
+            "overall_score": 85.6,
+            "cosine_similarity": 78.61,
+            "required_skills_matched": [
+                "customer support",
+                "quality assurance",
+                "communication"
+            ],
+            "required_skills_missing": [
                 "tele-evaluation"
+            ],
+            "preferred_skills_matched": [
+                "reporting"
+            ]
+        },
+        "created_at": "2026-10-12T03:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-38",
+        "job_id": "eiq-job-8",
+        "candidate_id": "eiq-cand-auto-38",
+        "stage": "Shortlisted",
+        "notes": "Screened profile from Nellore. Competency score verified against job skill vectors.",
+        "match_score": 74.0,
+        "match_details": {
+            "overall_score": 74.0,
+            "cosine_similarity": 69.28,
+            "required_skills_matched": [
+                "customer support",
+                "tele-evaluation",
+                "communication"
+            ],
+            "required_skills_missing": [
+                "quality assurance"
             ],
             "preferred_skills_matched": []
         },
-        "created_at": "2026-10-14T15:31:22.887668"
+        "created_at": "2026-10-10T22:44:54.160659"
     },
     {
-        "id": "eiq-app-9",
+        "id": "eiq-app-auto-39",
+        "job_id": "eiq-job-8",
+        "candidate_id": "eiq-cand-auto-39",
+        "stage": "Under Review",
+        "notes": "Screened profile from Kochi. Competency score verified against job skill vectors.",
+        "match_score": 57.5,
+        "match_details": {
+            "overall_score": 57.5,
+            "cosine_similarity": 49.87,
+            "required_skills_matched": [
+                "customer support",
+                "communication"
+            ],
+            "required_skills_missing": [
+                "tele-evaluation",
+                "quality assurance"
+            ],
+            "preferred_skills_matched": [
+                "helpdesk"
+            ]
+        },
+        "created_at": "2026-10-14T09:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-40",
+        "job_id": "eiq-job-8",
+        "candidate_id": "eiq-cand-auto-40",
+        "stage": "Applied",
+        "notes": "Screened profile from Ongole. Competency score verified against job skill vectors.",
+        "match_score": 42.0,
+        "match_details": {
+            "overall_score": 42.0,
+            "cosine_similarity": 34.42,
+            "required_skills_matched": [
+                "customer support"
+            ],
+            "required_skills_missing": [
+                "tele-evaluation",
+                "quality assurance",
+                "communication"
+            ],
+            "preferred_skills_matched": []
+        },
+        "created_at": "2026-10-13T17:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-41",
         "job_id": "eiq-job-9",
-        "candidate_id": "eiq-cand-9",
-        "stage": "Interview",
+        "candidate_id": "eiq-cand-auto-41",
+        "stage": "Offer",
+        "notes": "Screened profile from Hyderabad. Competency score verified against job skill vectors.",
         "match_score": 97.0,
         "match_details": {
             "overall_score": 97.0,
+            "cosine_similarity": 90.81,
             "required_skills_matched": [
-                "django",
                 "python",
-                "redis",
+                "django",
+                "sql",
+                "redis"
+            ],
+            "required_skills_missing": [],
+            "preferred_skills_matched": [
+                "aws",
+                "kafka"
+            ]
+        },
+        "created_at": "2026-10-12T05:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-42",
+        "job_id": "eiq-job-9",
+        "candidate_id": "eiq-cand-auto-42",
+        "stage": "Interview",
+        "notes": "Screened profile from Pune. Competency score verified against job skill vectors.",
+        "match_score": 86.2,
+        "match_details": {
+            "overall_score": 86.2,
+            "cosine_similarity": 81.47,
+            "required_skills_matched": [
+                "python",
+                "django",
                 "sql"
+            ],
+            "required_skills_missing": [
+                "redis"
             ],
             "preferred_skills_matched": [
                 "aws"
             ]
         },
-        "created_at": "2026-10-14T15:31:22.887668"
+        "created_at": "2026-10-11T16:44:54.160659"
     },
     {
-        "id": "eiq-app-10",
-        "job_id": "eiq-job-10",
-        "candidate_id": "eiq-cand-10",
-        "stage": "Interview",
-        "match_score": 97.0,
+        "id": "eiq-app-auto-43",
+        "job_id": "eiq-job-9",
+        "candidate_id": "eiq-cand-auto-43",
+        "stage": "Shortlisted",
+        "notes": "Screened profile from Bengaluru. Competency score verified against job skill vectors.",
+        "match_score": 73.0,
         "match_details": {
-            "overall_score": 97.0,
+            "overall_score": 73.0,
+            "cosine_similarity": 65.82,
             "required_skills_matched": [
-                "next.js",
+                "python",
+                "sql",
+                "redis"
+            ],
+            "required_skills_missing": [
+                "django"
+            ],
+            "preferred_skills_matched": []
+        },
+        "created_at": "2026-10-11T01:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-44",
+        "job_id": "eiq-job-9",
+        "candidate_id": "eiq-cand-auto-44",
+        "stage": "Under Review",
+        "notes": "Screened profile from Ahmedabad. Competency score verified against job skill vectors.",
+        "match_score": 56.4,
+        "match_details": {
+            "overall_score": 56.4,
+            "cosine_similarity": 51.53,
+            "required_skills_matched": [
+                "python",
+                "sql"
+            ],
+            "required_skills_missing": [
+                "django",
+                "redis"
+            ],
+            "preferred_skills_matched": [
+                "kafka"
+            ]
+        },
+        "created_at": "2026-10-11T00:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-45",
+        "job_id": "eiq-job-9",
+        "candidate_id": "eiq-cand-auto-45",
+        "stage": "Applied",
+        "notes": "Screened profile from Hyderabad. Competency score verified against job skill vectors.",
+        "match_score": 38.5,
+        "match_details": {
+            "overall_score": 38.5,
+            "cosine_similarity": 30.79,
+            "required_skills_matched": [
+                "python"
+            ],
+            "required_skills_missing": [
+                "django",
+                "sql",
+                "redis"
+            ],
+            "preferred_skills_matched": []
+        },
+        "created_at": "2026-10-12T21:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-46",
+        "job_id": "eiq-job-10",
+        "candidate_id": "eiq-cand-auto-46",
+        "stage": "Offer",
+        "notes": "Screened profile from Chennai. Competency score verified against job skill vectors.",
+        "match_score": 98.0,
+        "match_details": {
+            "overall_score": 98.0,
+            "cosine_similarity": 90.45,
+            "required_skills_matched": [
                 "react",
+                "next.js",
                 "typescript",
                 "tailwind"
+            ],
+            "required_skills_missing": [],
+            "preferred_skills_matched": [
+                "graphql",
+                "figma"
+            ]
+        },
+        "created_at": "2026-10-10T18:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-47",
+        "job_id": "eiq-job-10",
+        "candidate_id": "eiq-cand-auto-47",
+        "stage": "Interview",
+        "notes": "Screened profile from Tiruchirappalli. Competency score verified against job skill vectors.",
+        "match_score": 88.0,
+        "match_details": {
+            "overall_score": 88.0,
+            "cosine_similarity": 84.89,
+            "required_skills_matched": [
+                "react",
+                "next.js",
+                "typescript"
+            ],
+            "required_skills_missing": [
+                "tailwind"
+            ],
+            "preferred_skills_matched": [
+                "graphql"
+            ]
+        },
+        "created_at": "2026-10-13T11:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-48",
+        "job_id": "eiq-job-10",
+        "candidate_id": "eiq-cand-auto-48",
+        "stage": "Shortlisted",
+        "notes": "Screened profile from Chennai. Competency score verified against job skill vectors.",
+        "match_score": 75.5,
+        "match_details": {
+            "overall_score": 75.5,
+            "cosine_similarity": 70.61,
+            "required_skills_matched": [
+                "react",
+                "next.js",
+                "tailwind"
+            ],
+            "required_skills_missing": [
+                "typescript"
+            ],
+            "preferred_skills_matched": []
+        },
+        "created_at": "2026-10-14T07:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-49",
+        "job_id": "eiq-job-10",
+        "candidate_id": "eiq-cand-auto-49",
+        "stage": "Under Review",
+        "notes": "Screened profile from Delhi. Competency score verified against job skill vectors.",
+        "match_score": 61.2,
+        "match_details": {
+            "overall_score": 61.2,
+            "cosine_similarity": 53.36,
+            "required_skills_matched": [
+                "react",
+                "tailwind"
+            ],
+            "required_skills_missing": [
+                "next.js",
+                "typescript"
             ],
             "preferred_skills_matched": [
                 "figma"
             ]
         },
-        "created_at": "2026-10-14T15:31:22.887668"
+        "created_at": "2026-10-12T22:44:54.160659"
+    },
+    {
+        "id": "eiq-app-auto-50",
+        "job_id": "eiq-job-10",
+        "candidate_id": "eiq-cand-auto-50",
+        "stage": "Applied",
+        "notes": "Screened profile from Chennai. Competency score verified against job skill vectors.",
+        "match_score": 44.0,
+        "match_details": {
+            "overall_score": 44.0,
+            "cosine_similarity": 38.61,
+            "required_skills_matched": [
+                "react"
+            ],
+            "required_skills_missing": [
+                "next.js",
+                "typescript",
+                "tailwind"
+            ],
+            "preferred_skills_matched": []
+        },
+        "created_at": "2026-10-11T06:44:54.160659"
     },
     {
         "job_id": "eiq-job-1",
-        "candidate_id": "eiq-cand-1",
+        "candidate_id": "462e73b3-8892-4100-b4cb-17fc7a0997f3",
         "stage": "Applied",
         "notes": null,
-        "match_score": 60.0,
+        "match_score": 13.72,
         "match_details": {
-            "overall_score": 60.0,
-            "cosine_similarity": 0.0,
+            "overall_score": 13.72,
+            "cosine_similarity": 4.08,
             "required_skills_matched": [
+                "python"
+            ],
+            "required_skills_missing": [
                 "react",
-                "python",
                 "fastapi",
                 "sql"
             ],
-            "required_skills_missing": [],
-            "preferred_skills_matched": [
-                "docker"
-            ]
+            "preferred_skills_matched": []
         },
-        "created_at": "2026-10-15T10:59:01.456845",
-        "id": "65a818ab-0471-4372-9a18-c68858ff4ef3"
-    },
-    {
-        "job_id": "eiq-job-4",
-        "candidate_id": "eiq-cand-4",
-        "stage": "Applied",
-        "notes": null,
-        "match_score": 60.0,
-        "match_details": {
-            "overall_score": 60.0,
-            "cosine_similarity": 0.0,
-            "required_skills_matched": [
-                "python",
-                "ocr",
-                "nlp",
-                "machine learning"
-            ],
-            "required_skills_missing": [],
-            "preferred_skills_matched": [
-                "tensorflow"
-            ]
-        },
-        "created_at": "2026-10-15T10:59:41.197023",
-        "id": "cf9bdec6-dcd2-44d9-9340-7dc628d15798"
+        "created_at": "2026-10-15T13:19:45.153410",
+        "id": "d645689e-031c-40ff-aef4-5ce24173a07e"
     }
 ]

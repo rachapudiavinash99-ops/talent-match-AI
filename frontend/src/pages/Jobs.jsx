@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import { 
   Briefcase, Plus, RefreshCw, Trash2, Eye, MapPin, Sparkles, 
-  X, Check, Search, Tag, AlertCircle, Building2, Layers
+  X, Check, Search, Tag, AlertCircle, Building2, Layers, Users, ArrowUpRight
 } from 'lucide-react';
 
 const API_BASE = 'http://localhost:8000/api';
 
 function Jobs() {
   const [jobs, setJobs] = useState([]);
+  const [applications, setApplications] = useState([]);
+  const [candidates, setCandidates] = useState([]);
   const [showForm, setShowForm] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedJobView, setSelectedJobView] = useState(null);
@@ -35,6 +38,8 @@ function Jobs() {
 
   const fetchJobs = () => {
     axios.get(`${API_BASE}/jobs/`).then(res => setJobs(res.data)).catch(err => console.error(err));
+    axios.get(`${API_BASE}/applications/`).then(res => setApplications(res.data)).catch(err => console.error(err));
+    axios.get(`${API_BASE}/candidates/`).then(res => setCandidates(res.data)).catch(err => console.error(err));
   };
 
   useEffect(() => { 
@@ -546,17 +551,20 @@ function Jobs() {
               <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-gray-400">Domain</th>
               <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-gray-400">Delivery Hub</th>
               <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-gray-400">Configured Skills</th>
+              <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-gray-400">Applicants</th>
               <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-gray-400 text-right">Actions</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-white/5">
             {filteredJobs.length === 0 ? (
               <tr>
-                <td colSpan="5" className="px-6 py-12 text-center text-gray-500 text-xs">
+                <td colSpan="6" className="px-6 py-12 text-center text-gray-500 text-xs">
                   No job opportunities matching "{searchTerm}". Click "+ Add Job Opportunity &amp; Skills" above to create one.
                 </td>
               </tr>
-            ) : filteredJobs.map(job => (
+            ) : filteredJobs.map(job => {
+              const jobApps = applications.filter(a => a.job_id === job.id);
+              return (
               <tr key={job.id} className="hover:bg-white/[0.02] transition-colors">
                 <td className="px-6 py-4">
                   <div className="font-bold text-white text-sm">{job.title}</div>
@@ -582,6 +590,15 @@ function Jobs() {
                     )}
                   </div>
                 </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <Link 
+                    to="/applications"
+                    className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-[#3fd0ff]/15 hover:bg-[#3fd0ff]/25 border border-[#3fd0ff]/30 text-[#3fd0ff] transition-colors"
+                  >
+                    <Users className="w-3 h-3 mr-1" />
+                    {jobApps.length} Applicants
+                  </Link>
+                </td>
                 <td className="px-6 py-4 whitespace-nowrap text-right text-xs">
                   <button 
                     onClick={() => setSelectedJobView(job)} 
@@ -597,7 +614,7 @@ function Jobs() {
                   </button>
                 </td>
               </tr>
-            ))}
+            );})}
           </tbody>
         </table>
       </div>
@@ -660,6 +677,58 @@ function Jobs() {
                 </div>
               )}
             </div>
+
+            {/* Screened Applicants Section */}
+            {(() => {
+              const jobApps = applications.filter(a => a.job_id === selectedJobView.id);
+              return (
+                <div className="pt-4 border-t border-white/10 mb-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-xs font-bold uppercase tracking-wider text-gray-300 flex items-center">
+                      <Users className="w-3.5 h-3.5 text-[#3fd0ff] mr-1.5" />
+                      Screened Candidate Profiles ({jobApps.length} Applicants with Varied Percentages)
+                    </span>
+                    <Link
+                      to="/applications"
+                      className="text-xs font-bold text-[#ff8a3d] hover:underline flex items-center"
+                    >
+                      AI Screener Console <ArrowUpRight className="w-3.5 h-3.5 ml-0.5" />
+                    </Link>
+                  </div>
+
+                  <div className="space-y-2 max-h-48 overflow-y-auto pr-1">
+                    {jobApps.length === 0 ? (
+                      <p className="text-xs text-gray-500 italic">No applications recorded for this requisition yet.</p>
+                    ) : (
+                      jobApps.map(app => {
+                        const cand = candidates.find(c => c.id === app.candidate_id);
+                        return (
+                          <div key={app.id} className="p-2.5 rounded-xl bg-white/[0.03] border border-white/5 flex items-center justify-between text-xs">
+                            <div>
+                              <span className="font-bold text-white block">{cand?.name || 'Applicant'}</span>
+                              <span className="text-[10px] text-gray-400">Stage: <strong className="text-gray-200">{app.stage}</strong></span>
+                            </div>
+                            <div className="flex items-center space-x-2">
+                              <span className={`px-2.5 py-0.5 rounded-full text-xs font-black ${
+                                app.match_score >= 85 
+                                  ? 'bg-emerald-950/80 text-emerald-300 border border-emerald-500/40' 
+                                  : app.match_score >= 70
+                                  ? 'bg-cyan-950/80 text-[#3fd0ff] border border-[#3fd0ff]/40'
+                                  : app.match_score >= 50
+                                  ? 'bg-orange-950/80 text-[#ff8a3d] border border-[#ff8a3d]/40'
+                                  : 'bg-rose-950/80 text-rose-300 border border-rose-500/40'
+                              }`}>
+                                {app.match_score}%
+                              </span>
+                            </div>
+                          </div>
+                        );
+                      })
+                    )}
+                  </div>
+                </div>
+              );
+            })()}
 
             <div className="flex justify-end pt-4 border-t border-white/10">
               <button 

@@ -48,7 +48,7 @@ function Reports() {
       const encodedUri = encodeURI("data:text/csv;charset=utf-8," + csv);
       const link = document.createElement("a");
       link.setAttribute("href", encodedUri);
-      link.setAttribute("download", `Accenture_TalentMatch_Report_${new Date().toISOString().split('T')[0]}.csv`);
+      link.setAttribute("download", `ElevateIQ_TalentMatch_Report_${new Date().toISOString().split('T')[0]}.csv`);
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -60,36 +60,36 @@ function Reports() {
   return (
     <div className="animate-fade-in-up text-white">
       <div className="pb-6 mb-8 border-b border-white/10">
-        <div className="inline-flex items-center space-x-1 text-xs font-bold uppercase tracking-widest text-[#a100ff] mb-1">
+        <div className="inline-flex items-center space-x-1 text-xs font-bold uppercase tracking-widest text-[#ff8a3d] mb-1">
           <Sparkles className="w-3.5 h-3.5 mr-1" /> Enterprise Telemetry &amp; Auditing
         </div>
         <h2 className="text-3xl font-black uppercase tracking-tight text-white">
-          Recruitment Intelligence Reports <span className="text-[#a100ff]">&gt;</span>
+          Recruitment Intelligence Reports <span className="text-[#3fd0ff]">&gt;</span>
         </h2>
         <p className="text-gray-400 text-xs mt-1">Export structured tabular data, compliance records, and applicant tracking summaries.</p>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-        <div className="accenture-card p-6 rounded-2xl border border-white/10 flex flex-col items-center justify-center text-center">
+        <div className="elevate-card p-6 rounded-2xl border border-white/10 flex flex-col items-center justify-center text-center">
           <h3 className="text-gray-400 text-xs font-bold uppercase tracking-wider mb-2">Ingested Resumes</h3>
-          <p className="text-5xl font-black text-[#a100ff]">{stats.candidates}</p>
+          <p className="text-5xl font-black text-[#ff8a3d]">{stats.candidates}</p>
           <span className="text-[10px] text-gray-500 mt-2 font-semibold uppercase">Parsed &amp; Vectorized</span>
         </div>
-        <div className="accenture-card p-6 rounded-2xl border border-white/10 flex flex-col items-center justify-center text-center">
+        <div className="elevate-card p-6 rounded-2xl border border-white/10 flex flex-col items-center justify-center text-center">
           <h3 className="text-gray-400 text-xs font-bold uppercase tracking-wider mb-2">Active Pipeline Matches</h3>
-          <p className="text-5xl font-black text-green-400">{stats.applications}</p>
+          <p className="text-5xl font-black text-emerald-400">{stats.applications}</p>
           <span className="text-[10px] text-gray-500 mt-2 font-semibold uppercase">Evaluated by Local NLP</span>
         </div>
-        <div className="accenture-card p-6 rounded-2xl border border-white/10 flex flex-col items-center justify-center text-center">
-          <h3 className="text-gray-400 text-xs font-bold uppercase tracking-wider mb-2">Active India Requisitions</h3>
-          <p className="text-5xl font-black text-blue-400">{stats.jobs}</p>
-          <span className="text-[10px] text-gray-500 mt-2 font-semibold uppercase">Live on Portal</span>
+        <div className="elevate-card p-6 rounded-2xl border border-white/10 flex flex-col items-center justify-center text-center">
+          <h3 className="text-gray-400 text-xs font-bold uppercase tracking-wider mb-2">Active Requisitions</h3>
+          <p className="text-5xl font-black text-[#3fd0ff]">{stats.jobs}</p>
+          <span className="text-[10px] text-gray-500 mt-2 font-semibold uppercase">Live on Portal (5+ apps each)</span>
         </div>
       </div>
 
-      <div className="accenture-card p-8 rounded-2xl border border-white/10">
+      <div className="elevate-card p-8 rounded-2xl border border-white/10">
         <div className="flex items-center space-x-3 mb-4">
-          <div className="p-3 bg-purple-950/60 border border-purple-500/30 rounded-xl text-[#a100ff]">
+          <div className="p-3 bg-orange-950/60 border border-[#ff8a3d]/30 rounded-xl text-[#ff8a3d]">
             <FileSpreadsheet className="w-6 h-6" />
           </div>
           <div>
@@ -104,7 +104,7 @@ function Reports() {
         
         <button 
           onClick={downloadCSV} 
-          className="px-6 py-3.5 bg-[#a100ff] hover:bg-[#8800db] text-white rounded-xl text-xs font-bold uppercase tracking-wider transition-all shadow-[0_0_20px_rgba(161,0,255,0.4)] flex items-center"
+          className="px-6 py-3.5 bg-gradient-to-r from-[#ff8a3d] to-[#f2701c] hover:brightness-110 text-white rounded-xl text-xs font-bold uppercase tracking-wider transition-all shadow-[0_0_20px_rgba(255,138,61,0.4)] flex items-center"
         >
           <Download className="w-4 h-4 mr-2" /> Export Master CSV Report &gt;
         </button>

@@ -1,24 +1,95 @@
 [
     {
-        "id": "eiq-cand-1",
+        "id": "eiq-cand-auto-1",
         "name": "Suresh Reddy",
-        "email": "suresh.reddy@elevateiq-talent.in",
-        "phone": "+91-9870396237",
+        "email": "suresh.reddy.24@elevateiq-talent.in",
+        "phone": "+91-9863749605",
         "skills": [
             "react",
             "python",
             "fastapi",
             "sql",
-            "docker"
+            "docker",
+            "next.js"
         ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "8 Years Professional Experience in Chennai",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
         "resume_file": "Suresh_Reddy_Resume.pdf",
-        "created_at": "2026-10-14T15:31:22.887668"
+        "created_at": "2026-10-11T16:44:54.160659"
     },
     {
-        "id": "eiq-cand-2",
+        "id": "eiq-cand-auto-2",
+        "name": "Ananya Sharma",
+        "email": "ananya.sharma.82@elevateiq-talent.in",
+        "phone": "+91-9839055756",
+        "skills": [
+            "react",
+            "python",
+            "fastapi",
+            "next.js"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "5 Years Professional Experience in Bengaluru",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Ananya_Sharma_Resume.pdf",
+        "created_at": "2026-10-11T13:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-3",
+        "name": "Vikramaditya Rao",
+        "email": "vikramaditya.rao.22@elevateiq-talent.in",
+        "phone": "+91-9842702920",
+        "skills": [
+            "react",
+            "python",
+            "sql",
+            "git"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "7 Years Professional Experience in Hyderabad",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Vikramaditya_Rao_Resume.pdf",
+        "created_at": "2026-10-11T13:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-4",
+        "name": "Meera Krishnan",
+        "email": "meera.krishnan.55@elevateiq-talent.in",
+        "phone": "+91-9839736753",
+        "skills": [
+            "python",
+            "sql",
+            "docker"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "4 Years Professional Experience in Chennai",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Meera_Krishnan_Resume.pdf",
+        "created_at": "2026-10-11T02:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-5",
+        "name": "Rohan Deshmukh",
+        "email": "rohan.deshmukh.90@elevateiq-talent.in",
+        "phone": "+91-9887785949",
+        "skills": [
+            "react",
+            "javascript",
+            "html",
+            "css"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "3 Years Professional Experience in Pune",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Rohan_Deshmukh_Resume.pdf",
+        "created_at": "2026-10-12T08:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-6",
         "name": "Deepa Nair",
-        "email": "deepa.nair@elevateiq-talent.in",
-        "phone": "+91-9863051761",
+        "email": "deepa.nair.61@elevateiq-talent.in",
+        "phone": "+91-9827963320",
         "skills": [
             "python",
             "web scraping",
@@ -26,44 +97,253 @@
             "sql",
             "scrapy"
         ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "6 Years Professional Experience in Kochi",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
         "resume_file": "Deepa_Nair_Resume.pdf",
-        "created_at": "2026-10-14T15:31:22.887668"
+        "created_at": "2026-10-14T02:44:54.160659"
     },
     {
-        "id": "eiq-cand-3",
+        "id": "eiq-cand-auto-7",
+        "name": "Harish Venkat",
+        "email": "harish.venkat.24@elevateiq-talent.in",
+        "phone": "+91-9884080038",
+        "skills": [
+            "python",
+            "web scraping",
+            "selenium",
+            "proxy rotation"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "4 Years Professional Experience in Hyderabad",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Harish_Venkat_Resume.pdf",
+        "created_at": "2026-10-14T12:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-8",
+        "name": "Sneha Kulkarni",
+        "email": "sneha.kulkarni.76@elevateiq-talent.in",
+        "phone": "+91-9875476958",
+        "skills": [
+            "python",
+            "web scraping",
+            "sql"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "5 Years Professional Experience in Bengaluru",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Sneha_Kulkarni_Resume.pdf",
+        "created_at": "2026-10-12T02:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-9",
+        "name": "Ashwin Prasad",
+        "email": "ashwin.prasad.48@elevateiq-talent.in",
+        "phone": "+91-9883969142",
+        "skills": [
+            "python",
+            "sql",
+            "scrapy",
+            "bs4"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "5 Years Professional Experience in Chennai",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Ashwin_Prasad_Resume.pdf",
+        "created_at": "2026-10-12T14:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-10",
+        "name": "Kavita Subramanian",
+        "email": "kavita.subramanian.86@elevateiq-talent.in",
+        "phone": "+91-9874062446",
+        "skills": [
+            "python",
+            "pandas",
+            "excel"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "6 Years Professional Experience in Hyderabad",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Kavita_Subramanian_Resume.pdf",
+        "created_at": "2026-10-11T01:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-11",
         "name": "Karthik Menon",
-        "email": "karthik.menon@elevateiq-talent.in",
-        "phone": "+91-9820858481",
+        "email": "karthik.menon.65@elevateiq-talent.in",
+        "phone": "+91-9845414517",
         "skills": [
             "aws",
             "docker",
             "kubernetes",
             "linux",
-            "terraform"
+            "terraform",
+            "ci/cd"
         ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "2 Years Professional Experience in Kochi",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
         "resume_file": "Karthik_Menon_Resume.pdf",
-        "created_at": "2026-10-14T15:31:22.887668"
+        "created_at": "2026-10-13T11:44:54.160659"
     },
     {
-        "id": "eiq-cand-4",
+        "id": "eiq-cand-auto-12",
+        "name": "Rajesh Nambiar",
+        "email": "rajesh.nambiar.14@elevateiq-talent.in",
+        "phone": "+91-9880040267",
+        "skills": [
+            "aws",
+            "docker",
+            "linux",
+            "ci/cd"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "7 Years Professional Experience in Thiruvananthapuram",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Rajesh_Nambiar_Resume.pdf",
+        "created_at": "2026-10-11T11:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-13",
+        "name": "Divya Varma",
+        "email": "divya.varma.16@elevateiq-talent.in",
+        "phone": "+91-9892014118",
+        "skills": [
+            "docker",
+            "linux",
+            "aws",
+            "bash"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "6 Years Professional Experience in Kochi",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Divya_Varma_Resume.pdf",
+        "created_at": "2026-10-11T04:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-14",
+        "name": "Tarun Chawla",
+        "email": "tarun.chawla.38@elevateiq-talent.in",
+        "phone": "+91-9874084086",
+        "skills": [
+            "linux",
+            "docker",
+            "terraform"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "8 Years Professional Experience in Bengaluru",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Tarun_Chawla_Resume.pdf",
+        "created_at": "2026-10-12T10:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-15",
+        "name": "Neha Singhal",
+        "email": "neha.singhal.75@elevateiq-talent.in",
+        "phone": "+91-9836561769",
+        "skills": [
+            "linux",
+            "networking",
+            "system admin"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "4 Years Professional Experience in Noida",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Neha_Singhal_Resume.pdf",
+        "created_at": "2026-10-12T01:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-16",
         "name": "Pooja Swaminathan",
-        "email": "pooja.swaminathan@elevateiq-talent.in",
-        "phone": "+91-9878153540",
+        "email": "pooja.swaminathan.69@elevateiq-talent.in",
+        "phone": "+91-9873158924",
         "skills": [
             "python",
             "ocr",
             "nlp",
             "machine learning",
-            "tensorflow"
+            "tensorflow",
+            "layoutlm"
         ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "3 Years Professional Experience in Chennai",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
         "resume_file": "Pooja_Swaminathan_Resume.pdf",
-        "created_at": "2026-10-14T15:31:22.887668"
+        "created_at": "2026-10-12T20:44:54.160659"
     },
     {
-        "id": "eiq-cand-5",
-        "name": "Venkat Sai",
-        "email": "venkat.sai@elevateiq-talent.in",
-        "phone": "+91-9870376285",
+        "id": "eiq-cand-auto-17",
+        "name": "Arvind Sundaram",
+        "email": "arvind.sundaram.39@elevateiq-talent.in",
+        "phone": "+91-9829574885",
+        "skills": [
+            "python",
+            "nlp",
+            "machine learning",
+            "layoutlm"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "6 Years Professional Experience in Bengaluru",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Arvind_Sundaram_Resume.pdf",
+        "created_at": "2026-10-12T00:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-18",
+        "name": "Priyanka Joshi",
+        "email": "priyanka.joshi.69@elevateiq-talent.in",
+        "phone": "+91-9895382059",
+        "skills": [
+            "python",
+            "machine learning",
+            "ocr",
+            "pytorch"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "4 Years Professional Experience in Hyderabad",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Priyanka_Joshi_Resume.pdf",
+        "created_at": "2026-10-11T05:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-19",
+        "name": "Gaurav Sengupta",
+        "email": "gaurav.sengupta.37@elevateiq-talent.in",
+        "phone": "+91-9810848929",
+        "skills": [
+            "python",
+            "nlp",
+            "tensorflow"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "7 Years Professional Experience in Kolkata",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Gaurav_Sengupta_Resume.pdf",
+        "created_at": "2026-10-14T13:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-20",
+        "name": "Shalini Patnaik",
+        "email": "shalini.patnaik.16@elevateiq-talent.in",
+        "phone": "+91-9857894037",
+        "skills": [
+            "python",
+            "scikit-learn",
+            "data analysis"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "2 Years Professional Experience in Bhubaneswar",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Shalini_Patnaik_Resume.pdf",
+        "created_at": "2026-10-12T03:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-21",
+        "name": "Venkatesh Prasad",
+        "email": "venkatesh.prasad.32@elevateiq-talent.in",
+        "phone": "+91-9815782110",
         "skills": [
             "computer vision",
             "annotation",
@@ -71,14 +351,82 @@
             "quality audit",
             "labeling"
         ],
-        "resume_file": "Venkat_Sai_Resume.pdf",
-        "created_at": "2026-10-14T15:31:22.887668"
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "6 Years Professional Experience in Vijayawada",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Venkatesh_Prasad_Resume.pdf",
+        "created_at": "2026-10-12T16:44:54.160659"
     },
     {
-        "id": "eiq-cand-6",
+        "id": "eiq-cand-auto-22",
+        "name": "Bhavana Kommineni",
+        "email": "bhavana.kommineni.67@elevateiq-talent.in",
+        "phone": "+91-9854227692",
+        "skills": [
+            "annotation",
+            "quality audit",
+            "computer vision",
+            "python"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "7 Years Professional Experience in Guntur",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Bhavana_Kommineni_Resume.pdf",
+        "created_at": "2026-10-11T12:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-23",
+        "name": "Manoj Kumar Reddy",
+        "email": "manoj.kumar.reddy.21@elevateiq-talent.in",
+        "phone": "+91-9899114031",
+        "skills": [
+            "annotation",
+            "quality audit",
+            "nlp",
+            "labeling"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "2 Years Professional Experience in Narasaraopet",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Manoj_Kumar_Reddy_Resume.pdf",
+        "created_at": "2026-10-13T20:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-24",
+        "name": "Rashmi Hegde",
+        "email": "rashmi.hegde.18@elevateiq-talent.in",
+        "phone": "+91-9851980920",
+        "skills": [
+            "annotation",
+            "quality audit",
+            "excel"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "3 Years Professional Experience in Mangaluru",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Rashmi_Hegde_Resume.pdf",
+        "created_at": "2026-10-13T18:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-25",
+        "name": "Deepak Verma",
+        "email": "deepak.verma.61@elevateiq-talent.in",
+        "phone": "+91-9882615528",
+        "skills": [
+            "annotation",
+            "data entry"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "6 Years Professional Experience in Visakhapatnam",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Deepak_Verma_Resume.pdf",
+        "created_at": "2026-10-13T22:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-26",
         "name": "Dr. Shalini Krishnan",
-        "email": "dr..shalini.krishnan@elevateiq-talent.in",
-        "phone": "+91-9814081848",
+        "email": "dr.shalini.krishnan.65@elevateiq-talent.in",
+        "phone": "+91-9840253315",
         "skills": [
             "medical coding",
             "icd-10",
@@ -86,65 +434,422 @@
             "hipaa",
             "rcm"
         ],
-        "resume_file": "Dr._Shalini_Krishnan_Resume.pdf",
-        "created_at": "2026-10-14T15:31:22.887668"
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "2 Years Professional Experience in Chennai",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Shalini_Krishnan_Resume.pdf",
+        "created_at": "2026-10-12T14:44:54.160659"
     },
     {
-        "id": "eiq-cand-7",
+        "id": "eiq-cand-auto-27",
+        "name": "Dr. Sangeetha Raman",
+        "email": "dr.sangeetha.raman.19@elevateiq-talent.in",
+        "phone": "+91-9861465640",
+        "skills": [
+            "medical coding",
+            "icd-10",
+            "cpt",
+            "claims audit"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "8 Years Professional Experience in Coimbatore",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Sangeetha_Raman_Resume.pdf",
+        "created_at": "2026-10-12T13:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-28",
+        "name": "Vignesh Pandian",
+        "email": "vignesh.pandian.87@elevateiq-talent.in",
+        "phone": "+91-9896113238",
+        "skills": [
+            "medical coding",
+            "icd-10",
+            "hipaa"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "3 Years Professional Experience in Madurai",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Vignesh_Pandian_Resume.pdf",
+        "created_at": "2026-10-12T22:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-29",
+        "name": "Swati Murthy",
+        "email": "swati.murthy.23@elevateiq-talent.in",
+        "phone": "+91-9837298908",
+        "skills": [
+            "medical coding",
+            "hipaa",
+            "rcm"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "7 Years Professional Experience in Chennai",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Swati_Murthy_Resume.pdf",
+        "created_at": "2026-10-11T09:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-30",
+        "name": "Praveen Pillai",
+        "email": "praveen.pillai.40@elevateiq-talent.in",
+        "phone": "+91-9828646950",
+        "skills": [
+            "medical coding",
+            "anatomy",
+            "billing"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "2 Years Professional Experience in Kollam",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Praveen_Pillai_Resume.pdf",
+        "created_at": "2026-10-12T08:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-31",
         "name": "Akhil Varma",
-        "email": "akhil.varma@elevateiq-talent.in",
-        "phone": "+91-9828166608",
+        "email": "akhil.varma.68@elevateiq-talent.in",
+        "phone": "+91-9871918519",
         "skills": [
             "ar calling",
             "denial management",
             "revenue cycle",
-            "communication"
+            "communication",
+            "insurance follow-up"
         ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "4 Years Professional Experience in Kochi",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
         "resume_file": "Akhil_Varma_Resume.pdf",
-        "created_at": "2026-10-14T15:31:22.887668"
+        "created_at": "2026-10-12T00:44:54.160659"
     },
     {
-        "id": "eiq-cand-8",
+        "id": "eiq-cand-auto-32",
+        "name": "Keerthi Vasudevan",
+        "email": "keerthi.vasudevan.73@elevateiq-talent.in",
+        "phone": "+91-9889339871",
+        "skills": [
+            "ar calling",
+            "denial management",
+            "communication",
+            "insurance follow-up"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "8 Years Professional Experience in Thrissur",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Keerthi_Vasudevan_Resume.pdf",
+        "created_at": "2026-10-13T06:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-33",
+        "name": "Gokul Raj",
+        "email": "gokul.raj.12@elevateiq-talent.in",
+        "phone": "+91-9828442914",
+        "skills": [
+            "ar calling",
+            "communication",
+            "revenue cycle"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "8 Years Professional Experience in Calicut",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Gokul_Raj_Resume.pdf",
+        "created_at": "2026-10-11T01:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-34",
+        "name": "Madhuri Rao",
+        "email": "madhuri.rao.67@elevateiq-talent.in",
+        "phone": "+91-9876381321",
+        "skills": [
+            "ar calling",
+            "communication",
+            "insurance follow-up"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "3 Years Professional Experience in Kochi",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Madhuri_Rao_Resume.pdf",
+        "created_at": "2026-10-14T01:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-35",
+        "name": "Santosh Iyer",
+        "email": "santosh.iyer.95@elevateiq-talent.in",
+        "phone": "+91-9860999596",
+        "skills": [
+            "communication",
+            "voice operations"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "5 Years Professional Experience in Palakkad",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Santosh_Iyer_Resume.pdf",
+        "created_at": "2026-10-12T16:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-36",
         "name": "Anusha Rao",
-        "email": "anusha.rao@elevateiq-talent.in",
-        "phone": "+91-9878722374",
+        "email": "anusha.rao.33@elevateiq-talent.in",
+        "phone": "+91-9894386379",
         "skills": [
             "customer support",
             "tele-evaluation",
             "quality assurance",
-            "communication"
+            "communication",
+            "helpdesk"
         ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "7 Years Professional Experience in Narasaraopet",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
         "resume_file": "Anusha_Rao_Resume.pdf",
-        "created_at": "2026-10-14T15:31:22.887668"
+        "created_at": "2026-10-14T08:44:54.160659"
     },
     {
-        "id": "eiq-cand-9",
+        "id": "eiq-cand-auto-37",
+        "name": "Vijay Anand",
+        "email": "vijay.anand.46@elevateiq-talent.in",
+        "phone": "+91-9847312644",
+        "skills": [
+            "customer support",
+            "quality assurance",
+            "communication",
+            "reporting"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "2 Years Professional Experience in Guntur",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Vijay_Anand_Resume.pdf",
+        "created_at": "2026-10-12T03:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-38",
+        "name": "Preethi Chandran",
+        "email": "preethi.chandran.62@elevateiq-talent.in",
+        "phone": "+91-9894697193",
+        "skills": [
+            "customer support",
+            "tele-evaluation",
+            "communication"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "4 Years Professional Experience in Nellore",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Preethi_Chandran_Resume.pdf",
+        "created_at": "2026-10-10T22:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-39",
+        "name": "Rohit George",
+        "email": "rohit.george.49@elevateiq-talent.in",
+        "phone": "+91-9823688458",
+        "skills": [
+            "customer support",
+            "communication",
+            "helpdesk"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "6 Years Professional Experience in Kochi",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Rohit_George_Resume.pdf",
+        "created_at": "2026-10-14T09:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-40",
+        "name": "Shalini Sridhar",
+        "email": "shalini.sridhar.97@elevateiq-talent.in",
+        "phone": "+91-9812893065",
+        "skills": [
+            "customer support",
+            "inbound calls"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "6 Years Professional Experience in Ongole",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Shalini_Sridhar_Resume.pdf",
+        "created_at": "2026-10-13T17:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-41",
         "name": "Mahesh Babu K",
-        "email": "mahesh.babu.k@elevateiq-talent.in",
-        "phone": "+91-9845423223",
+        "email": "mahesh.babu.k.48@elevateiq-talent.in",
+        "phone": "+91-9856699889",
         "skills": [
             "python",
             "django",
             "sql",
             "redis",
-            "aws"
+            "aws",
+            "kafka"
         ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "8 Years Professional Experience in Hyderabad",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
         "resume_file": "Mahesh_Babu_K_Resume.pdf",
-        "created_at": "2026-10-14T15:31:22.887668"
+        "created_at": "2026-10-12T05:44:54.160659"
     },
     {
-        "id": "eiq-cand-10",
+        "id": "eiq-cand-auto-42",
+        "name": "Tanvi Deshpande",
+        "email": "tanvi.deshpande.54@elevateiq-talent.in",
+        "phone": "+91-9872626258",
+        "skills": [
+            "python",
+            "django",
+            "sql",
+            "aws"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "8 Years Professional Experience in Pune",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Tanvi_Deshpande_Resume.pdf",
+        "created_at": "2026-10-11T16:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-43",
+        "name": "Nikhil Bhat",
+        "email": "nikhil.bhat.47@elevateiq-talent.in",
+        "phone": "+91-9850562947",
+        "skills": [
+            "python",
+            "sql",
+            "redis",
+            "flask"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "2 Years Professional Experience in Bengaluru",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Nikhil_Bhat_Resume.pdf",
+        "created_at": "2026-10-11T01:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-44",
+        "name": "Radhika Patel",
+        "email": "radhika.patel.18@elevateiq-talent.in",
+        "phone": "+91-9855085886",
+        "skills": [
+            "python",
+            "sql",
+            "kafka"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "8 Years Professional Experience in Ahmedabad",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Radhika_Patel_Resume.pdf",
+        "created_at": "2026-10-11T00:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-45",
+        "name": "Abhishek Kulkarni",
+        "email": "abhishek.kulkarni.17@elevateiq-talent.in",
+        "phone": "+91-9840564364",
+        "skills": [
+            "python",
+            "c++",
+            "data structures"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "5 Years Professional Experience in Hyderabad",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Abhishek_Kulkarni_Resume.pdf",
+        "created_at": "2026-10-12T21:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-46",
         "name": "Divya Balaji",
-        "email": "divya.balaji@elevateiq-talent.in",
-        "phone": "+91-9822564178",
+        "email": "divya.balaji.61@elevateiq-talent.in",
+        "phone": "+91-9879131427",
         "skills": [
             "react",
             "next.js",
             "typescript",
             "tailwind",
+            "graphql",
             "figma"
         ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "4 Years Professional Experience in Chennai",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
         "resume_file": "Divya_Balaji_Resume.pdf",
-        "created_at": "2026-10-14T15:31:22.887668"
+        "created_at": "2026-10-10T18:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-47",
+        "name": "Karthika Mohan",
+        "email": "karthika.mohan.82@elevateiq-talent.in",
+        "phone": "+91-9879207966",
+        "skills": [
+            "react",
+            "next.js",
+            "typescript",
+            "graphql"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "8 Years Professional Experience in Tiruchirappalli",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Karthika_Mohan_Resume.pdf",
+        "created_at": "2026-10-13T11:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-48",
+        "name": "Varun Nambisan",
+        "email": "varun.nambisan.95@elevateiq-talent.in",
+        "phone": "+91-9828659969",
+        "skills": [
+            "react",
+            "next.js",
+            "tailwind",
+            "css"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "2 Years Professional Experience in Chennai",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Varun_Nambisan_Resume.pdf",
+        "created_at": "2026-10-14T07:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-49",
+        "name": "Aditi Saxena",
+        "email": "aditi.saxena.88@elevateiq-talent.in",
+        "phone": "+91-9892286070",
+        "skills": [
+            "react",
+            "tailwind",
+            "figma",
+            "ui design"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "6 Years Professional Experience in Delhi",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Aditi_Saxena_Resume.pdf",
+        "created_at": "2026-10-12T22:44:54.160659"
+    },
+    {
+        "id": "eiq-cand-auto-50",
+        "name": "Mithun Roy",
+        "email": "mithun.roy.61@elevateiq-talent.in",
+        "phone": "+91-9823143071",
+        "skills": [
+            "react",
+            "javascript",
+            "bootstrap"
+        ],
+        "education": "B.Tech / MCA / Relevant Degree",
+        "experience": "3 Years Professional Experience in Chennai",
+        "projects": "Enterprise Scale implementations at ElevateIQ delivery ecosystem.",
+        "resume_file": "Mithun_Roy_Resume.pdf",
+        "created_at": "2026-10-11T06:44:54.160659"
+    },
+    {
+        "name": "bhanu",
+        "email": "rachapudiavinash99@GMAIL.COM",
+        "phone": "9550671920",
+        "skills": [
+            "python",
+            "machine learning"
+        ],
+        "resume_file": "3d43176e-0147-4cf8-9a7b-c949f39760d7.pdf",
+        "created_at": "2026-10-15T13:19:44.489229",
+        "id": "462e73b3-8892-4100-b4cb-17fc7a0997f3"
     }
 ]
