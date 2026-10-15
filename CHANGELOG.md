@@ -70,3 +70,4 @@
 - Patch v2.070: expand skill synonyms for Kubernetes, Docker and Cloud DevOps
 - Patch v2.071: optimize memory footprint during large corpus batch loading
 - Patch v2.072: enhance candidate skills gap visual representation in analytics modal
+- Patch v2.073: add zero-leakage local validation guarantee check
