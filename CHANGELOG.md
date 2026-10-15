@@ -273,3 +273,4 @@
 - [PR #137] feat(core): Implement exponential backoff with random jitter for concurrent filelock contention [PR #137]
 - [PR #138] feat(api): Add SHA-256 content fingerprinting to identify duplicate resume submissions [PR #138]
 - [PR #139] feat(ui): Memoize careers search filtering pipeline for instant client-side responsiveness [PR #139]
+- [PR #140] feat(nlp): Enrich stopword exclusions with healthcare and medical coding industry terms [PR #140]
