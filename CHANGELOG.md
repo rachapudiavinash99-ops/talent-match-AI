@@ -186,3 +186,4 @@
 - [PR #048] feat(api): Add SHA-256 content fingerprinting to identify duplicate resume submissions [PR #048]
 - [PR #049] feat(ui): Memoize careers search filtering pipeline for instant client-side responsiveness [PR #049]
 - [PR #050] feat(nlp): Enrich stopword exclusions with healthcare and medical coding industry terms [PR #050]
+- [PR #051] feat(data): Expand cloud infrastructure skills taxonomy for AWS, GCP, and Kubernetes [PR #051]
