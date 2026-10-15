@@ -1,0 +1,1 @@
+- Patch v2.001: optimize TF-IDF stopword caching for latency reduction
