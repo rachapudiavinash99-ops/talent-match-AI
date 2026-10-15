@@ -131,3 +131,4 @@
 - Patch v2.131: optimize memory footprint during large corpus batch loading
 - Patch v2.132: enhance candidate skills gap visual representation in analytics modal
 - Patch v2.133: add zero-leakage local validation guarantee check
+- Patch v2.134: refine recruiter stage change audit log timestamps
