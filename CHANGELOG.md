@@ -1,2 +1,3 @@
 - Patch v2.001: optimize TF-IDF stopword caching for latency reduction
 - Patch v2.002: tune cosine similarity threshold parameters for medical coding roles
+- Patch v2.003: enhance PyPDF2 multi-page layout text extraction accuracy
