@@ -215,3 +215,4 @@
 - [PR #078] feat(api): Add SHA-256 content fingerprinting to identify duplicate resume submissions [PR #078]
 - [PR #079] feat(ui): Memoize careers search filtering pipeline for instant client-side responsiveness [PR #079]
 - [PR #080] feat(nlp): Enrich stopword exclusions with healthcare and medical coding industry terms [PR #080]
+- [PR #082] feat(parser): Enhance docx parser to recursively traverse candidate employment table cells [PR #082]
