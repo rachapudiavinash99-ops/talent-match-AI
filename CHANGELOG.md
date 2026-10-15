@@ -126,3 +126,4 @@
 - Patch v2.126: implement smooth scrolling anchor navigation for corporate header
 - Patch v2.127: add candidate phone number sanitization filter
 - Patch v2.128: enhance filelock retry backoff jitter during concurrent writes
+- Patch v2.129: add benchmark telemetry for candidate vector scoring speed
