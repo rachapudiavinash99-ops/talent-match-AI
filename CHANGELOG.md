@@ -56,3 +56,4 @@
 - Patch v2.056: improve mobile responsiveness on careers public portal
 - Patch v2.057: optimize Vite development build bundle size
 - Patch v2.058: add healthcheck endpoint for ASGI container orchestration
+- Patch v2.059: enhance CSV export headers with formatted ISO timestamps
