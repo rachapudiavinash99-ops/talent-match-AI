@@ -285,3 +285,4 @@
 - [PR #149] feat(data): Add verified requisition metadata for Chennai, Kochi, and Narasaraopet centers [PR #149]
 - [PR #150] feat(api): Implement lightweight /healthz and /readyz probes for container environments [PR #150]
 - [PR #151] feat(api): Configure burst threshold tolerance on candidate upload endpoints [PR #151]
+- [PR #152] feat(core): Expose filelock contention wait time in microseconds to telemetry logs [PR #152]
