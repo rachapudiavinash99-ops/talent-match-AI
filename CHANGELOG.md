@@ -180,3 +180,4 @@
 - [PR #042] feat(ui): Optimize WCAG 2.1 AA compliant color contrast on midnight recruiter console [PR #042]
 - [PR #043] feat(parser): Improve PyPDF2 multi-page header/footer boundary detection and text stitching [PR #043]
 - [PR #044] feat(data): Add verified requisition metadata for Chennai, Kochi, and Narasaraopet centers [PR #044]
+- [PR #045] feat(api): Implement lightweight /healthz and /readyz probes for container environments [PR #045]
