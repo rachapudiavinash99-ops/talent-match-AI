@@ -136,3 +136,4 @@
 - Patch v2.136: improve mobile responsiveness on careers public portal
 - Patch v2.137: optimize Vite development build bundle size
 - Patch v2.138: add healthcheck endpoint for ASGI container orchestration
+- [PR #001] feat(nlp): Expand TF-IDF vectorizer to capture bi-grams and tri-grams for composite technical terms [PR #001]
