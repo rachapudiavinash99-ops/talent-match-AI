@@ -93,3 +93,4 @@
 - Patch v2.093: add zero-leakage local validation guarantee check
 - Patch v2.094: refine recruiter stage change audit log timestamps
 - Patch v2.095: update candidate search index with smart case-folding
+- Patch v2.096: improve mobile responsiveness on careers public portal
