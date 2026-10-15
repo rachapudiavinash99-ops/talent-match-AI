@@ -166,3 +166,4 @@
 - [PR #028] feat(parser): Improve PyPDF2 multi-page header/footer boundary detection and text stitching [PR #028]
 - [PR #029] feat(data): Add verified requisition metadata for Chennai, Kochi, and Narasaraopet centers [PR #029]
 - [PR #030] feat(api): Implement lightweight /healthz and /readyz probes for container environments [PR #030]
+- [PR #031] feat(nlp): Expand TF-IDF vectorizer to capture bi-grams and tri-grams for composite technical terms [PR #031]
