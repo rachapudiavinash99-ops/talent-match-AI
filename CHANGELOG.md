@@ -44,3 +44,4 @@
 - Patch v2.044: add support for docx table cell parsing in resume extractor
 - Patch v2.045: refine ElevateIQ orange gradient button micro-interactions
 - Patch v2.046: implement smooth scrolling anchor navigation for corporate header
+- Patch v2.047: add candidate phone number sanitization filter
