@@ -120,3 +120,4 @@
 - Patch v2.120: add fallback avatar icon for candidates without profile pictures
 - Patch v2.121: optimize TF-IDF stopword caching for latency reduction
 - Patch v2.122: tune cosine similarity threshold parameters for medical coding roles
+- Patch v2.123: enhance PyPDF2 multi-page layout text extraction accuracy
