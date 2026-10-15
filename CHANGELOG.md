@@ -200,3 +200,4 @@
 - [PR #062] feat(core): Implement exponential backoff with random jitter for concurrent filelock contention [PR #062]
 - [PR #063] feat(api): Add SHA-256 content fingerprinting to identify duplicate resume submissions [PR #063]
 - [PR #065] feat(nlp): Enrich stopword exclusions with healthcare and medical coding industry terms [PR #065]
+- [PR #066] feat(data): Expand cloud infrastructure skills taxonomy for AWS, GCP, and Kubernetes [PR #066]
