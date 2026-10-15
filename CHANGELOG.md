@@ -221,3 +221,4 @@
 - [PR #085] feat(core): Guarantee zero corruption during atomic rename cycles on JSON repository files [PR #085]
 - [PR #086] feat(bpo): Map ICD-10-CM diagnostic synonyms to standardized clinical coding competency nodes [PR #086]
 - [PR #087] feat(ui): Optimize WCAG 2.1 AA compliant color contrast on midnight recruiter console [PR #087]
+- [PR #088] feat(parser): Improve PyPDF2 multi-page header/footer boundary detection and text stitching [PR #088]
