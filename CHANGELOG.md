@@ -219,3 +219,4 @@
 - [PR #083] feat(ui): Refine circular match gauge with smooth SVG stroke-dashoffset spring physics [PR #083]
 - [PR #084] feat(api): Add input validation and string sanitization on candidate application payloads [PR #084]
 - [PR #085] feat(core): Guarantee zero corruption during atomic rename cycles on JSON repository files [PR #085]
+- [PR #086] feat(bpo): Map ICD-10-CM diagnostic synonyms to standardized clinical coding competency nodes [PR #086]
