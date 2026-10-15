@@ -137,3 +137,4 @@
 - Patch v2.137: optimize Vite development build bundle size
 - Patch v2.138: add healthcheck endpoint for ASGI container orchestration
 - [PR #001] feat(nlp): Expand TF-IDF vectorizer to capture bi-grams and tri-grams for composite technical terms [PR #001]
+- [PR #002] feat(core): Implement exponential backoff with random jitter for concurrent filelock contention [PR #002]
