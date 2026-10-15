@@ -117,3 +117,4 @@
 - Patch v2.117: optimize Vite development build bundle size
 - Patch v2.118: add healthcheck endpoint for ASGI container orchestration
 - Patch v2.119: enhance CSV export headers with formatted ISO timestamps
+- Patch v2.120: add fallback avatar icon for candidates without profile pictures
