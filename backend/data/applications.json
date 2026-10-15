@@ -188,7 +188,7 @@
         "id": "eiq-app-auto-9",
         "job_id": "eiq-job-2",
         "candidate_id": "eiq-cand-auto-9",
-        "stage": "Under Review",
+        "stage": "Rejected",
         "notes": "Screened profile from Chennai. Competency score verified against job skill vectors.",
         "match_score": 57.5,
         "match_details": {
