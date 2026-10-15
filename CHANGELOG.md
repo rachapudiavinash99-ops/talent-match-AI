@@ -160,3 +160,4 @@
 - [PR #022] feat(parser): Enhance docx parser to recursively traverse candidate employment table cells [PR #022]
 - [PR #023] feat(ui): Refine circular match gauge with smooth SVG stroke-dashoffset spring physics [PR #023]
 - [PR #024] feat(api): Add input validation and string sanitization on candidate application payloads [PR #024]
+- [PR #025] feat(core): Guarantee zero corruption during atomic rename cycles on JSON repository files [PR #025]
