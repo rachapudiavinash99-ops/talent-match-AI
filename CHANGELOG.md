@@ -15,3 +15,4 @@
 - Patch v2.015: update candidate search index with smart case-folding
 - Patch v2.016: improve mobile responsiveness on careers public portal
 - Patch v2.017: optimize Vite development build bundle size
+- Patch v2.018: add healthcheck endpoint for ASGI container orchestration
