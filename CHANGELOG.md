@@ -194,3 +194,4 @@
 - [PR #056] feat(bpo): Map ICD-10-CM diagnostic synonyms to standardized clinical coding competency nodes [PR #056]
 - [PR #057] feat(ui): Optimize WCAG 2.1 AA compliant color contrast on midnight recruiter console [PR #057]
 - [PR #058] feat(parser): Improve PyPDF2 multi-page header/footer boundary detection and text stitching [PR #058]
+- [PR #059] feat(data): Add verified requisition metadata for Chennai, Kochi, and Narasaraopet centers [PR #059]
