@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+backend/venv/
+venv/
+env/
+.env
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Build outputs & caches
+frontend/dist/
+frontend/build/
+.vite/
+
+# Archives
+*.zip
+*.tar.gz
+
+# System & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
